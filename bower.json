@@ -18,7 +18,7 @@
     "tests"
   ],
   "dependencies": {
-    "lassediercks-resources": "git@github.com:lassediercks/lassediercks-resources.git",
+    "lassediercks-resources": "git@github.com:lassediercks/lassediercks-resources.git#0.0.1",
     "76d-social-icons": "~1.0.4"
   }
 }

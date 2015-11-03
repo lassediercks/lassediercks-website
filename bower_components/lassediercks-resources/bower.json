@@ -1,13 +1,13 @@
 {
   "name": "lassediercks-resources",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "authors": [
-    "Lasse Diercks <lasse@jimdo.com>"
+    "Lasse Diercks <hi@lassediercks.de>"
   ],
   "description": "resources for my homepage lassediercks.de",
   "main": "",
   "moduleType": [],
-  "license": "MIT",
+  "license": "None",
   "homepage": "lassediercks.de",
   "private": true,
   "ignore": [

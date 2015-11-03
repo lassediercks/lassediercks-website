@@ -1,12 +1,13 @@
 {
   "name": "lassediercks-resources",
+  "version": "0.0.1",
   "authors": [
-    "Lasse Diercks <lasse@jimdo.com>"
+    "Lasse Diercks <hi@lassediercks.de>"
   ],
   "description": "resources for my homepage lassediercks.de",
   "main": "",
   "moduleType": [],
-  "license": "MIT",
+  "license": "None",
   "homepage": "lassediercks.de",
   "private": true,
   "ignore": [
@@ -16,14 +17,13 @@
     "test",
     "tests"
   ],
-  "_release": "0ef17ee251",
+  "_release": "0.0.1",
   "_resolution": {
-    "type": "branch",
-    "branch": "master",
-    "commit": "0ef17ee25146b4a320cba3772a0d2bed448dfdd4"
+    "type": "version",
+    "tag": "0.0.1",
+    "commit": "5e94994748328ba8092caff96fa45e4012f25b05"
   },
   "_source": "git@github.com:lassediercks/lassediercks-resources.git",
-  "_target": "*",
-  "_originalSource": "git@github.com:lassediercks/lassediercks-resources.git",
-  "_direct": true
+  "_target": "0.0.1",
+  "_originalSource": "git@github.com:lassediercks/lassediercks-resources.git"
 }
