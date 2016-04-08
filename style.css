@@ -4,18 +4,14 @@
 
 
 body{
-  font-family: Montserrat-Bold;
+  font-family: Montserrat-Light;
   margin: 0;
   padding: 0;
   height: 100vh;
   width: 100vw;
   color: #5A5A5A;
   background: #F2F2F2;
-  font-size: 16px;
-  display: flex;
-  flex-flow: column wrap;
-  align-content: center;
-  justify-content: center;
+  font-size: 18px;
 }
 
 /*header*/
@@ -40,7 +36,7 @@ body{
   height: 100%;
   width: inherit;
 }
-.ld-header__title{
+.ld-headline{
   font-family: Montserrat-Bold;
   font-size: 34px;
   color: #89072E;
@@ -50,9 +46,23 @@ body{
   display: inline-block;
 }
 
+/*text*/
+.ld-text{
+  max-width: 30em;
+}
 /*social bar*/
 .si{color: #5A5A5A;}
 .ld-content{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ld-content img{
+  width: 100%;
 }
 .ld-social-bar{
   display: flex;
@@ -68,4 +78,14 @@ body{
 }
 .ld-social-bar__label{
   padding: 0 8px;
+}
+
+.ld-button{
+  text-decoration: none;
+  font-weight: bold;
+  background: #89072E;
+  padding: 1em 2em;
+  color: white;
+  border-radius: 2px;
+  margin: 1em;
 }
