@@ -11,7 +11,9 @@ body{
   font-size: 18px;
   overflow: auto;
 }
-
+a{
+  color: #2CABA7;
+}
 ::selection {
   background: #2CABA7; /* WebKit/Blink Browsers */
   color: white;
