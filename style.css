@@ -8,7 +8,6 @@
 body{
   font-family: Montserrat-Light;
   margin: 0;
-  padding: 0;
   height: 100vh;
   color: #5A5A5A;
   background: #F2F2F2;
@@ -19,7 +18,7 @@ body{
 .ld-header{
   display: flex;
   align-items: center;
-  padding: 36px 0;
+  padding: 1em;
   justify-content: center;
 }
 .ld-header__image{
@@ -27,6 +26,7 @@ body{
   width: 6em;
   margin-right: 16px;
   height: 6em;
+  flex-shrink: 0;
   display: inline-flex;
   overflow: hidden;
   align-items: center;
@@ -49,7 +49,8 @@ body{
 
 /*text*/
 .ld-text{
-  max-width: 30em;
+  max-width: 32em;
+  padding: 0 2em;
 }
 /*social bar*/
 .si{color: #5A5A5A;}
