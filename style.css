@@ -8,10 +8,12 @@
 body{
   font-family: Montserrat-Light;
   margin: 0;
+  padding: 0;
   height: 100vh;
   color: #5A5A5A;
   background: #F2F2F2;
   font-size: 18px;
+  overflow: auto;
 }
 
 /*header*/
@@ -62,6 +64,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 2em;
 }
 .ld-content img{
   width: 100%;
