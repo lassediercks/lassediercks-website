@@ -24,15 +24,24 @@
   text-decoration: none;
   color: inherit;
   max-width: 15em;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 550px) {
+  .mf-statement{
+    font-size: 2.5em;
+  }
+}
+@media (min-width: 800px) {
   .mf-statement{
     font-size: 3em;
   }
 }
-
+@media (min-width: 1200px) {
+  .mf-statement{
+    font-size: 4em;
+  }
+}
 .mf-head{
   font-size: 1em;
 }
