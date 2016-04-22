@@ -1,0 +1,24 @@
+.mf{
+  width: 100vw;
+}
+.mf-page{
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mf-statement{
+  max-width: 15em;
+  font-size: 54px;
+}
+
+.mf-head{
+  font-size: 1em;
+}
