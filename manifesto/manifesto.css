@@ -2,22 +2,7 @@
   font-size: 115%; /* This means 16px */
   line-height: 1.3;
 }
-.mf-scroller{
-   height: 100vh;
-   width: 100vw;
-   overflow-x: hidden;
-   overflow: auto;
-  -webkit-overflow-scrolling: touch;
-  -webkit-scroll-snap-type: mandatory;
-  -ms-scroll-snap-type: mandatory;
-  scroll-snap-type: mandatory;
-  -webkit-scroll-snap-destination: 100% 0%;
-  -ms-scroll-snap-destination: 100% 0;
-  scroll-snap-destination: 100% 0%;
-  -webkit-scroll-snap-points-y: repeat(100%);
-  -ms-scroll-snap-points-y: repeat(100%);
-  scroll-snap-points-y: repeat(100%);
-}
+
 .mf-page{
   height: 100vh;
   width: 100%;
