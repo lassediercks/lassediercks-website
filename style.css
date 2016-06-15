@@ -3,121 +3,39 @@
 }
 
 body{
-  font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
   color: #5A5A5A;
   font-size: 18px;
   overflow: auto;
 }
-a{
-  color: #2CABA7;
+
+.ldw-home{
+  border: 1em solid var(--ld-red);
+  border-top: transparent;
+  border-bottom: transparent;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
 }
-::selection {
-  background: #2CABA7; /* WebKit/Blink Browsers */
-  color: white;
+
+::selection{
+  background: var(--ld-red); /* WebKit/Blink Browsers */
+  color: var(--ld-light);
 }
 ::-moz-selection {
-  background: #2CABA7; /* Gecko Browsers */
-  color: white;
+  background: var(--ld-red); /* WebKit/Blink Browsers */
+  color: var(--ld-light);
 }
 
-/*header*/
-.ld-header{
-  display: flex;
-  align-items: center;
-  padding: 1em;
-  justify-content: center;
-  flex-direction: column;
-  background: #2CABA7;
-  border-bottom: 2px solid #5A5A5A;
-  margin-bottom: 1em;
+.ldw-content{
+  padding: 0 3em;
+  max-width: 60em;
 }
 
-.ld-header .ld-header__h1{
-  color: white;
-  padding: .5em;
-  font-weight: bold;
-}
-.ld-header__image{
-  border-radius: 100%;
-  width: 8em;
-  margin-right: 16px;
-  margin: 1em;
-  height: 8em;
-  flex-shrink: 0;
-  overflow: hidden;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 0px 0 2px #5A5A5A;
 
-}
-.ld-header__image img{
-  height: 100%;
-  width: inherit;
-}
-.ld-headline{
-  font-size: 48px;
-  line-height: 1;
-  font-weight: 300;
-  text-align: left;
-  margin:  0;
-  display: inline-block;
-}
 
-/*text*/
-.ld-text{
-  max-width: 39em;
-  line-height: 1.7;
-  padding: 0 2em;
-}
-/*social bar*/
-.si{color: #5A5A5A;}
-.ld-content{
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 2em;
-}
-.ld-content img{
-  width: 100%;
-  border-bottom: 2px solid #5A5A5A;
-  border-top: 2px solid #5A5A5A;
-}
-.ld-social-bar{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.ld-social-bar__item{
-  text-decoration: none;
-  display: inline-flex;
-  color: inherit;
-  padding: 8px;
-  align-items: center;
-}
-.ld-social-bar__label{
-  padding: 0 8px;
-}
 
-.ld-button{
-  text-decoration: none;
-  font-weight: bold;
-  display: block;
-  background: none;
-  border: 2px solid #2CABA7;
-  padding: 1em 2em;
-  color: #2CABA7;
-  border-radius: 2px;
-  margin: 1em 0;
-  width: 100%;
-  text-align: center;
-}
-.ld-button:hover, .ld-button:active{
-  color: white;
-  background: #2CABA7;
-}

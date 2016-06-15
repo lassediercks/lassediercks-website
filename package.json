@@ -11,7 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "gulp": "^3.9.1",
-    "lassediercks-design": "^0.1.0"
+    "lassediercks-design": "0.2.0"
+  },
+  "repository" :
+    { "type" : "git"
+    , "url" : "https://github.com/lassediercks/lassediercks-website"
   },
   "devDependencies": {
     "gulp-server-livereload": "^1.7.3"
