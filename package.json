@@ -10,7 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "lassediercks-design": "^0.1.0"
   },
   "devDependencies": {
     "gulp-server-livereload": "^1.7.3"
