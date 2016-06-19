@@ -1,6 +1,9 @@
 .mf{
   font-size: 115%; /* This means 16px */
   line-height: 1.3;
+  border: 1em solid var(--ld-red);
+  border-top: transparent;
+  border-bottom: transparent;
 }
 
 .mf-page{
