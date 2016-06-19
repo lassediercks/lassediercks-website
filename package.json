@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "gulp": "^3.9.1",
-    "lassediercks-design": "0.2.2"
+    "lassediercks-design": "0.2.3"
   },
   "repository" :
     { "type" : "git"
