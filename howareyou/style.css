@@ -1,0 +1,89 @@
+
+.hay{
+	--hay-purple: #BA9EFF;
+	--hay-purple--dark: #1F133D;
+	--hay-yellow: #FCE56E;
+	background: var(--hay-yellow);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	font-family: 'Branding', sans-serif;
+	box-sizing: border-box;
+	padding: 1em;
+}
+.hay-main{
+	max-width: 600px;
+}
+.hay-headline{
+	text-align: center;
+	font-weight: 600;
+	font-size: 56px;
+	color: var(--hay-purple);
+	text-shadow: 1.5px 1.5px 0 var(--hay-purple--dark);
+}
+
+.hay-paragraph{
+	text-align: center;
+	font-size: 1.6em;
+	margin-bottom: 1em;
+}
+
+.hay-buttongroup{
+	display: flex;
+	justify-content: space-around;
+
+}
+.hay-moodbuttonwrap{
+	text-align: center;
+}
+.hay-moodbutton{
+	width: 96px;
+	height: 96px;
+	padding: 10px;
+	display: inline-block;
+	font-size: inherit;
+	border: none;
+	background: var(--hay-purple);
+	cursor: pointer;
+	border-radius: 106px;
+	border: 2px solid var(--hay-purple--dark);
+}
+.hay-moodbutton__label{
+	font-size: 1.5em;
+	display: inline-block;
+	text-align: center;
+	padding: .5em;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.hay-face{
+	width: 96px;
+	height: 96px;
+}
+
+.hay-cta{
+	width: 100%;
+	text-align: center;
+	display: block;
+	background: var(--hay-purple--dark);
+	color: var(--hay-purple);
+	text-decoration: none;
+	border-radius: 10px;
+	padding: 1em;
+	box-sizing: border-box;
+	font-size: 1.5em;
+}
+
+::selection{
+  background: var(--hay-purple--dark); /* WebKit/Blink Browsers */
+  color: var(--hay-yellow);
+}
+::-moz-selection {
+  background: var(--hay-purple--dark); /* WebKit/Blink Browsers */
+  color: var(--hay-yellow);
+}
