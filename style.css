@@ -19,14 +19,6 @@ body{
   height: 100vh;
 }
 
-::selection{
-  background: var(--ld-red); /* WebKit/Blink Browsers */
-  color: var(--ld-light);
-}
-::-moz-selection {
-  background: var(--ld-red); /* WebKit/Blink Browsers */
-  color: var(--ld-light);
-}
 
 .ldw-content{
   padding: 0 3em;
