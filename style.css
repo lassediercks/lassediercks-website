@@ -17,6 +17,7 @@ body{
   justify-content: center;
   width: 100vw;
   height: 100vh;
+  font-size: 14px;
 }
 
 
@@ -27,4 +28,15 @@ body{
 
 
 
+@media (max-width: 600px) {
+    .ld{
+      font-size: 10px;
+    }
+}
+
+@media (min-width: 900px) {
+    .ld{
+      font-size: 14px;
+    }
+}
 
