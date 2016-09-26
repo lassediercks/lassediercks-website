@@ -35,6 +35,6 @@
   height: auto;
   padding: 4em 3em;
 }
-.mf-footer__content{
-  max-width: 45em;
+.mf-footer .ld-paragraph{
+  text-align: center;
 }
