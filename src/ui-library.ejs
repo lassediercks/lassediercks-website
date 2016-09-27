@@ -1,0 +1,93 @@
+<% include partials/head %>
+<body class='ld hld'>
+  <% include partials/topbar %>
+
+  <header class="hld-header hld-header--ui-lib">
+    <h2 class="ld-headline">Jimdo Ui-Library</h2>
+    <span class="">achieving ui-consistency</span>
+    <div class="hld-tag-group">
+      <span class="ld-tag">Html</span>
+      <span class="ld-tag">JSX</span>
+      <span class="ld-tag">BEM</span>
+    </div>
+  </header>
+  <div class="hld-content">
+    <section class="hld-section">
+      <p class="ld-paragraph ld-paragraph--centered">
+        From PSD files to save buttons: Consistency has always been a challenge in design. In a 7 Year old company it’s not hard to reveal inconsistencies in colors, buttons or behaviour patterns.
+        <br><br>
+        It all began a lot earlier with a compass extension that just stored color variables called Jimlib. Today the Jimdo Ui-library is the entry point for ui-development.
+      </p>
+      <div class="ld-heading">
+        <h3 class="ld-heading__title">One small step</h3>
+      </div>
+      <p class="ld-paragraph ld-paragraph--centered">
+        Where do you start with something so big? The first pattern of the library I've build, was also the first pattern integrated in the product. A slider.
+      </p>
+      <img src="./img/slider.svg" alt="A html input type slider, the bar is black the knob is blue." class="hld-image">
+      <div class="ld-browserframe">
+        <div class="ld-browserframe__head">
+          <div class="ld-browserframe__buttons">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="ld-browserframe__url"></div>
+        </div>
+        <img class="ld-browserframe__image" src="./img/stylemode.png" alt="Screenshot of the style section of jimdo">
+      </div>
+      <div class="ld-heading">
+        <h3 class="ld-heading__title">Internal open source</h3>
+      </div>
+      <p class="ld-paragraph ld-paragraph--centered">
+        This project was born as a personal effort therfore it had no owner or responsible team. To make communication easy and delightful we treated it as an open source project. Everyone could participate, create issues, pull requests and merge stuff. Everything had to be documented aswell.  
+        <br><br>
+        We prioritised the ideas by the magnitude of the problem it would fix and came up with a lot of commitments: e.g. naming conventions, Sass rules and a commit message format.
+      </p>
+
+      <div class="ld-heading">
+        <h3 class="ld-heading__title">Organisation, please</h3>
+      </div>
+      <p class="ld-paragraph ld-paragraph--centered">
+        With more and more patterns coming to the party we quickly realised that we needed a shared vocabulary for different types of patterns.
+        The atomic design methodology looked promising so we adapted it to our needs and used it.
+      </p>
+      <img src="./img/jui-methodology.png" alt="" class="hld-image">
+      <p class="ld-paragraph ld-paragraph--centered">
+        Atoms are the smallest pieces, clusters are biggest ones.
+      </p>
+
+
+
+      <div class="ld-heading">
+        <h3 class="ld-heading__title">Get people on board</h3>
+      </div>
+      <p class="ld-paragraph ld-paragraph--centered">
+        The last big challenge was to make people realize that it's something that's handy and fun to use. Just like we want our product to be. For that purpose we created a public github page to demo the components and made it available for easy consumption with bower (later also with npm).
+      </p>
+      <div class="ld-browserframe">
+        <div class="ld-browserframe__head">
+          <div class="ld-browserframe__buttons">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="ld-browserframe__url"></div>
+        </div>
+        <img class="ld-browserframe__image" src="./img/ui-library-slider.png" alt="Screenshot of the jimdo ui-library slider">
+      </div>
+
+		<p class="ld-paragraph ld-paragraph--centered">
+      After establishing the ui-library we were able to built huge components with almost no custom css. This project sparked my passion for pattern libraries and I loved everything about it: The integration, the collaboration, the problems and the moment when it payed off.
+      <br><br>
+      <a href="http://jimdo.github.io/ui-library/ui-lab/index.html" target="_blank" class="ld-link">Take a look at the Jimdo Ui-Library Demo</a>
+		</p>
+
+
+
+
+    </section>
+
+  </div>
+
+  <% include partials/footer %>

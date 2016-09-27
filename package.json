@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "description": "This is the website of Lasse Diercks",
+  "main": "lassediercks.css",
+  "scripts": {
+    "start": "gulp demo"
+  },
+  "author": "@lassediercks",
+  "license": "ISC",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://www.lassediercks.de"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.4.1",
+    "cssnano": "^3.7.4",
+    "gulp": "^3.9.1",
+    "gulp-batch": "^1.0.5",
+    "gulp-ejs": "^2.2.0",
+    "gulp-postcss": "^6.1.1",
+    "gulp-server-livereload": "^1.7.3",
+    "gulp-watch": "^4.3.9",
+    "postcss-cssnext": "^2.7.0"
+  }
+}

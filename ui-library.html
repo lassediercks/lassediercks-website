@@ -1,0 +1,218 @@
+<html lang="en">
+
+<!DOCTYPE html>
+
+<!--
+
+Hello inspector awesome,
+
+Do you know the good ol' times when Firebug, the plugin for mozilla, was the only inspecting Tool? I do 😀
+
+The hottest discussion I've had about Html has been if an interface needs semantically correct Html or not. Spoiler: Yes.
+
+When creating HTML I strongly care for structure, readability and accessibility.
+
+Have fun inspecting my Website.
+
+PS: This whole thing is created upon a small design system I created for myself.
+check it out here: http://lassediercks.github.io/design
+
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4361C6">
+
+  <title>Lasse Diercks | Designer</title>
+  <meta property="og:site_name" content="Lasse Diercks | Designer"/>
+  <meta property="og:title" content="Lasse Diercks | Designer"/>
+
+  <meta name="description" content="Designer with a love for pattern libraries. We should hire him.">
+  <meta property="og:description" content="Designer with a love for pattern libraries. We should hire him."/>
+  <meta property="og:image" content="http://lassediercks.de/img/social-banner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="1200">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:url" content="http://lassediercks.de/">
+
+  <script type="text/javascript">
+// '%c Oh my heavens! ', 'background: #222;');
+  function helloInspector(){
+    console.log("%cHello There!", 'line-height: 3;color: #3B3B3B;font-size: 22px;font-family:sans-serif;font-weight:bold;')
+    console.log("%cI see you want to take a peek under the roof?", 'color: #3B3B3B;font-size: 18px;font-family:sans-serif;')
+    console.log("%cWith my current level of javascript skills I’m able to modify existing code and estimate what is possible. When it comes to implementing business logic I prefer to pair up with a frontend-developer to get the concepts into production.", 'color: #3B3B3B;font-size: 18px;font-family:sans-serif;')
+  };
+
+  helloInspector();
+  </script>
+
+
+  <link rel="preload" href="http://lassediercks.github.io/design/font/branding-medium-webfont.woff2" type='font/woff2' as="font">
+  <link rel="preload" href="http://lassediercks.github.io/design/font/branding-bold-webfont.woff2" type='font/woff2' as="font">
+  <link rel="preload" href="http://lassediercks.github.io/design/font/branding-light-webfont.woff2" type='font/woff2' as="font">
+  <link href="http://lassediercks.github.io/design/font/branding-medium-webfont.woff" type='font/woff'>
+  <link href="http://lassediercks.github.io/design/font/branding-bold-webfont.woff" type='font/woff'>
+  <link href="http://lassediercks.github.io/design/font/branding-light-webfont.woff" type='font/woff'>
+  <link rel="stylesheet" href="http://lassediercks.github.io/design/font/branding.css">
+  <link rel="stylesheet" href="http://lassediercks.github.io/design/lassediercks.css">
+  <link rel="stylesheet" href="http://lassediercks.github.io/design/dist/lassediercks.css">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class='ld hld'>
+  <nav class="ld-topbar">
+  <a href="index.html#about" class="ld-topbar__item">About</a>
+  <a href="index.html#work" class="ld-topbar__item">Work</a>
+  <a href="index.html#expertise" class="ld-topbar__item">Expertise</a>
+  <a href="index.html#resume" class="ld-topbar__item">Resume</a>
+  <a href="mailto:hire@lassediercks.de" class="ld-topbar__item hld-cta">Contact</a>
+</nav>
+
+
+  <header class="hld-header hld-header--ui-lib">
+    <h2 class="ld-headline">Jimdo Ui-Library</h2>
+    <span class="">achieving ui-consistency</span>
+    <div class="hld-tag-group">
+      <span class="ld-tag">Html</span>
+      <span class="ld-tag">JSX</span>
+      <span class="ld-tag">BEM</span>
+    </div>
+  </header>
+  <div class="hld-content">
+    <section class="hld-section">
+      <p class="ld-paragraph ld-paragraph--centered">
+        From PSD files to save buttons: Consistency has always been a challenge in design. In a 7 Year old company it’s not hard to reveal inconsistencies in colors, buttons or behaviour patterns.
+        <br><br>
+        It all began a lot earlier with a compass extension that just stored color variables called Jimlib. Today the Jimdo Ui-library is the entry point for ui-development.
+      </p>
+      <div class="ld-heading">
+        <h3 class="ld-heading__title">One small step</h3>
+      </div>
+      <p class="ld-paragraph ld-paragraph--centered">
+        Where do you start with something so big? The first pattern of the library I've build, was also the first pattern integrated in the product. A slider.
+      </p>
+      <img src="./img/slider.svg" alt="A html input type slider, the bar is black the knob is blue." class="hld-image">
+      <div class="ld-browserframe">
+        <div class="ld-browserframe__head">
+          <div class="ld-browserframe__buttons">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="ld-browserframe__url"></div>
+        </div>
+        <img class="ld-browserframe__image" src="./img/stylemode.png" alt="Screenshot of the style section of jimdo">
+      </div>
+      <div class="ld-heading">
+        <h3 class="ld-heading__title">Internal open source</h3>
+      </div>
+      <p class="ld-paragraph ld-paragraph--centered">
+        This project was born as a personal effort therfore it had no owner or responsible team. To make communication easy and delightful we treated it as an open source project. Everyone could participate, create issues, pull requests and merge stuff. Everything had to be documented aswell.  
+        <br><br>
+        We prioritised the ideas by the magnitude of the problem it would fix and came up with a lot of commitments: e.g. naming conventions, Sass rules and a commit message format.
+      </p>
+
+      <div class="ld-heading">
+        <h3 class="ld-heading__title">Organisation, please</h3>
+      </div>
+      <p class="ld-paragraph ld-paragraph--centered">
+        With more and more patterns coming to the party we quickly realised that we needed a shared vocabulary for different types of patterns.
+        The atomic design methodology looked promising so we adapted it to our needs and used it.
+      </p>
+      <img src="./img/jui-methodology.png" alt="" class="hld-image">
+      <p class="ld-paragraph ld-paragraph--centered">
+        Atoms are the smallest pieces, clusters are biggest ones.
+      </p>
+
+
+
+      <div class="ld-heading">
+        <h3 class="ld-heading__title">Get people on board</h3>
+      </div>
+      <p class="ld-paragraph ld-paragraph--centered">
+        The last big challenge was to make people realize that it's something that's handy and fun to use. Just like we want our product to be. For that purpose we created a public github page to demo the components and made it available for easy consumption with bower (later also with npm).
+      </p>
+      <div class="ld-browserframe">
+        <div class="ld-browserframe__head">
+          <div class="ld-browserframe__buttons">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="ld-browserframe__url"></div>
+        </div>
+        <img class="ld-browserframe__image" src="./img/ui-library-slider.png" alt="Screenshot of the jimdo ui-library slider">
+      </div>
+
+		<p class="ld-paragraph ld-paragraph--centered">
+      After establishing the ui-library we were able to built huge components with almost no custom css. This project sparked my passion for pattern libraries and I loved everything about it: The integration, the collaboration, the problems and the moment when it payed off.
+      <br><br>
+      <a href="http://jimdo.github.io/ui-library/ui-lab/index.html" target="_blank" class="ld-link">Take a look at the Jimdo Ui-Library Demo</a>
+		</p>
+
+
+
+
+    </section>
+
+  </div>
+
+  <footer class="hld-footer">
+
+  <div class="ld-call-and-action hld-footer__cta">
+    <div class="ld-call-and-action__text">
+      <h3 class="ld-call-and-action__title">Want me on your Team?</h3>
+      <h4 class="ld-call-and-action__subtitle">I'm available for hire and freelance work</h4>
+    </div>
+    <a href="mailto:hire@lassediercks.de" class="ld-call-and-action__button ld-button hld-cta">Get In Touch</a>
+  </div>
+  <div class="ld-call-and-action print">
+    <div class="ld-call-and-action__text">
+      <h3 class="ld-call-and-action__title" aria-hidden>Want me on your Team?</h3>
+      <h4 class="ld-call-and-action__subtitle" aria-hidden>I'd be happy to recieve an e-mail from you at hire@lassediercks.de</h4>
+    </div>
+  </div>
+
+
+  <div class="hld-footer__content">
+    <div class="ld-grid">
+      <h4 class="hld-footer__headline ld-grid__row">
+        Where to find more stuff from me in the rest of the interwebs?
+      </h4>
+      <div class="ld-grid__col">
+        <a target="_blank" href="https://medium.com/@lassediercks" class="ld-link hld-footer__link">Read my thoughts on Medium</a>
+        <a target="_blank" href="http://lassediercks.de/manifesto/" class="ld-link hld-footer__link">Get inspired by my manifesto</a>
+        <a target="_blank" href="https://github.com/lassediercks" class="ld-link hld-footer__link">Review my projects on Github</a>
+      </div>
+      <div class="ld-grid__col">
+        <a target="_blank" href="http://codepen.io/lassediercks" class="ld-link hld-footer__link">Inspect my Codepens</a>
+        <a target="_blank" href="https://twitter.com/lassediercks" class="ld-link hld-footer__link">Follow me on Twitter</a>
+        <a target="_blank" href="https://www.instagram.com/lassediercks/" class="ld-link hld-footer__link">Look at my Instagram</a>
+      </div>
+    </div>
+
+
+
+  </div>
+  <div class="hld-footer__end">
+    <hr class="ld-divider hld-footer__divider">
+    2016 Lasse Diercks  - hire@lassediercks.de
+  </div>
+</footer>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-25133681-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+</body>
+</html>
+
