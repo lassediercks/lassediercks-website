@@ -47,6 +47,9 @@ body{
   color: white;
   border-bottom: 5px solid var(--ld-blue);
 }
+.hld-header .ld-headline{
+  text-align: center;
+}
 .hld-header--ui-lib{
   height: 20em;
 }
