@@ -46,6 +46,7 @@ body{
   background: var(--ld-blue--light);
   color: white;
   border-bottom: 5px solid var(--ld-blue);
+  text-align: center;
 }
 .hld-header .ld-headline{
   text-align: center;
