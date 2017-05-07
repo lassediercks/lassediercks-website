@@ -49,6 +49,7 @@ body{
   text-align: center;
 }
 .hld-header .ld-headline{
+  margin-top: .3em;
   text-align: center;
 }
 .hld-header--ui-lib{
@@ -164,9 +165,11 @@ body{
   display: block;
   max-width: 100%;
 }
+
 .hld-cta{
-  color: var(--ld-really-dark);
-  background-color: var(--ld-green);
+  color: var(--ld-blue);
+  background-color: var(--ld-yellow);
+  --focus-color: var(--ld-red);
 }
 
 .hld-footer{
@@ -179,7 +182,7 @@ body{
 }
 .hld-footer__cta{
   background: var(--main-color--light);
-  padding: 2em 0;
+  padding: 2em 1em;
 }
 
 .hld-footer__headline{

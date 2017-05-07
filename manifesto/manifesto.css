@@ -1,6 +1,5 @@
 .mf{
   line-height: 1.3;
-  border: 1em solid var(--ld-red);
   border-top: transparent;
   text-align: center;
   border-bottom: transparent;
@@ -35,6 +34,7 @@
   height: auto;
   padding: 4em 3em;
 }
+
 .mf-footer .ld-paragraph{
   text-align: center;
 }
