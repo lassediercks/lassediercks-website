@@ -243,3 +243,8 @@ body{
   }
 
 }
+
+
+#lasse + #kristina:first-child{
+  visibility: hidden;
+}
