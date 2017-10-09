@@ -246,5 +246,5 @@ body{
 
 
 #lasse + #kristina:first-child{
-  visibility: hidden;
+  visibility: visible;
 }
