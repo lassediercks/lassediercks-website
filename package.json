@@ -7,7 +7,9 @@
   },
   "author": "@lassediercks",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "html-pdf": "^2.1.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://www.lassediercks.de"
