@@ -52,17 +52,19 @@ body{
   margin-top: .3em;
   text-align: center;
 }
+
 .hld-header--ui-lib{
   height: 20em;
 }
+
 .hld-content{
-  padding: 0 1.5em;
+  padding: 3em 1.5em 0;
   max-width: 55em;
   margin: 0 auto;
 }
 
 .hld-section{
-  padding: 3em 0 0 0;
+  margin-bottom: 3em;
 }
 .hld-section__projecthead{
   text-align: center;
@@ -181,6 +183,7 @@ body{
   text-align: center;
 }
 .hld-footer__cta{
+  color: var(--ld-light);
   background: var(--main-color--light);
   padding: 2em 1em;
 }
@@ -244,6 +247,19 @@ body{
 
 }
 
+.hld-cfc{
+  display: flex;
+  flex-direction: column;
+  -ms-align-items: center;
+  align-items: center;
+  align-content: center;
+  background: var(--ld-yellow);
+  color: var(--ld-really-dark);
+  padding: 1em;
+  margin: 0 auto 6em;
+  box-shadow: .5em .5em 0 0 var(--ld-blue);
+  transform: rotate(-3deg);
+}
 
 #lasse + #kristina:first-child{
   visibility: visible;
