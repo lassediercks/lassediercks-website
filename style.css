@@ -262,4 +262,5 @@ body {
 
 #lasse + #kristina:first-child {
   visibility: visible;
+  content: "skadi";
 }
