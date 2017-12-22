@@ -165,9 +165,8 @@ body {
 }
 
 .hld-cta {
-  color: var(--ld-blue);
+  color: var(--ld-really-dark);
   background-color: var(--ld-yellow);
-  --focus-color: var(--ld-red);
 }
 
 .hld-footer {
