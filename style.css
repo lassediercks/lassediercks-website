@@ -12,32 +12,33 @@ I think in the end, css is a tool and the only tool we currently have so we have
 
 */
 
-
-*,*:before,*:after{
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
-body{
+body {
   margin: 0;
   padding: 0;
   overflow: auto;
 }
 
 @media (max-width: 600px) {
-  a[href="index.html#resume"]{
+  a[href="index.html#resume"] {
     display: none;
   }
-  #work .ld-browserframe{
+  #work .ld-browserframe {
     display: none;
   }
 }
 
 @media (max-width: 400px) {
-  a[href="index.html#about"]{
+  a[href="index.html#about"] {
     display: none;
   }
 }
 
-.hld-header{
+.hld-header {
   padding: 2em;
   display: flex;
   justify-content: center;
@@ -48,35 +49,34 @@ body{
   border-bottom: 5px solid var(--ld-blue);
   text-align: center;
 }
-.hld-header .ld-headline{
-  margin-top: .3em;
+.hld-header .ld-headline {
+  margin-top: 0.3em;
   text-align: center;
 }
 
-.hld-header--ui-lib{
+.hld-header--ui-lib {
   height: 20em;
 }
 
-.hld-content{
+.hld-content {
   padding: 3em 1.5em 0;
   max-width: 55em;
   margin: 0 auto;
 }
 
-.hld-section{
+.hld-section {
   margin-bottom: 3em;
 }
-.hld-section__projecthead{
+.hld-section__projecthead {
   text-align: center;
   padding: 2.5em;
 }
 
-.hld-tag-group{
-  padding: .5em 0 1em 0;
+.hld-tag-group {
+  padding: 0.5em 0 1em 0;
 }
 
-
-.hld-resume{
+.hld-resume {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -84,36 +84,33 @@ body{
   text-align: center;
 }
 
-.hld-resume__role{
+.hld-resume__role {
   margin-bottom: 1em;
 }
-.hld-resume__time{
+.hld-resume__time {
   font-size: inherit;
   display: block;
   font-weight: 200;
 }
-.hld-resume__position-name{
+.hld-resume__position-name {
   font-size: 1.5em;
 }
 
-.hld-resume__company{
+.hld-resume__company {
   font-weight: 700;
   font-size: 1em;
   padding-bottom: 3em;
 }
 
-
-
-.hld-siteadmin-nav{
+.hld-siteadmin-nav {
   width: 250px;
   height: 373px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
   margin-bottom: 2.5em;
-
 }
-.hld-siteadmin-nav__image{
+.hld-siteadmin-nav__image {
   display: block;
   opacity: 0;
   width: 100%;
@@ -121,60 +118,59 @@ body{
   top: 0;
   position: absolute;
 }
-.hld-siteadmin-nav__image:first-child{
+.hld-siteadmin-nav__image:first-child {
   animation: first 15s linear infinite;
 }
-.hld-siteadmin-nav__image{
+.hld-siteadmin-nav__image {
   animation: second 15s linear infinite;
 }
-.hld-siteadmin-nav__image:last-child{
+.hld-siteadmin-nav__image:last-child {
   animation: last 15s linear infinite;
 }
 
-
-
-@keyframes first{
-  0%{
+@keyframes first {
+  0% {
     opacity: 1;
   }
-  25%{
+  25% {
     opacity: 1;
   }
 }
 
-@keyframes second{
-  25%{
+@keyframes second {
+  25% {
     opacity: 0;
   }
-  30%,55%{
-    opacity: 1
-  }
-}
-@keyframes last{
-  55%{
-    opacity: 0;
-  }
-  60%{
+  30%,
+  55% {
     opacity: 1;
   }
-  100%{
+}
+@keyframes last {
+  55% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
     opacity: 1;
   }
 }
 
-.hld-image{
+.hld-image {
   margin: 0 auto 3em;
   display: block;
   max-width: 100%;
 }
 
-.hld-cta{
+.hld-cta {
   color: var(--ld-blue);
   background-color: var(--ld-yellow);
   --focus-color: var(--ld-red);
 }
 
-.hld-footer{
+.hld-footer {
   color: white;
   background: var(--ld-blue);
   display: flex;
@@ -182,72 +178,75 @@ body{
   flex-flow: column wrap;
   text-align: center;
 }
-.hld-footer__cta{
+.hld-footer__cta {
   color: var(--ld-light);
   background: var(--main-color--light);
   padding: 2em 1em;
 }
 
-.hld-footer__headline{
+.hld-footer__headline {
   font-weight: 300;
   margin: 1em 0;
 }
-.hld-footer__content{
+.hld-footer__content {
   padding: 2em 1.5em;
   margin: 0 auto;
   max-width: 29em;
   text-align: left;
 }
-.hld-footer__link{
+.hld-footer__link {
   font-weight: 700;
   display: block;
   margin-bottom: 1em;
 }
-.hld-footer__divider{
+.hld-footer__divider {
   background: white;
 }
-.hld-footer__end{
+.hld-footer__end {
   width: 100%;
   max-width: 50em;
-  font-size: .8em;
+  font-size: 0.8em;
   display: block;
   margin: 0 auto;
   padding-bottom: 2.5em;
 }
 
-.print{
+.print {
   display: none;
 }
-@media print{
-  .print{
+@media print {
+  .print {
     display: block;
     color: black;
   }
-  .hld-content{
+  .hld-content {
     padding: 0 3em;
   }
-  .screen{
+  .screen {
     display: none;
   }
-  .ld-topbar,.hld-footer__cta,#work,.hld-footer__content,.hld-footer__end{
+  .ld-topbar,
+  .hld-footer__cta,
+  #work,
+  .hld-footer__content,
+  .hld-footer__end {
     display: none;
   }
-  .hld-section{
+  .hld-section {
     page-break-after: always;
   }
-  #resume{
+  #resume {
     page-break-after: avoid;
   }
-  .hld-header{
-    color: black
+  .hld-header {
+    color: black;
   }
-  .ld-tags{
+  .ld-tags {
     background-color: green;
   }
-
 }
 
-.hld-cfc{
+.hld-cfc {
   display: flex;
   flex-direction: column;
   -ms-align-items: center;
@@ -257,10 +256,10 @@ body{
   color: var(--ld-really-dark);
   padding: 1em;
   margin: 0 auto 6em;
-  box-shadow: .5em .5em 0 0 var(--ld-blue);
+  box-shadow: 0.5em 0.5em 0 0 var(--ld-blue);
   transform: rotate(-3deg);
 }
 
-#lasse + #kristina:first-child{
+#lasse + #kristina:first-child {
   visibility: visible;
 }
