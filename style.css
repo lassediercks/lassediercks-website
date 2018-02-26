@@ -1,314 +1,200 @@
-/*
+:root {
+  --ld-pink: #d319ff;
+  --ld-blue: #054aa0;
+  --ld-orange: #f78a1d;
+  --ld-red: #fd2207;
+  --ld-green: #10e458;
+  --ld-mint: #64eac2;
 
-Hello There!
-
-Want to take a look into my stylesheet skills?
-For this I'm using native css with a postcss step to produce
-css for browser that don't understand native variables yet.
-
-On my Projects I've worked with Sass in both scss and sass syntax, with less and stylus.
-
-I think in the end, css is a tool and the only tool we currently have so we have to treat it good.
-
-*/
+  --ld-grey: #2e2e2e;
+}
 
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
+
 body {
-  margin: 0;
-  padding: 0;
-  overflow: auto;
-}
-
-@media (max-width: 600px) {
-  a[href="index.html#resume"] {
-    display: none;
-  }
-  #work .ld-browserframe {
-    display: none;
-  }
-}
-
-@media (max-width: 400px) {
-  a[href="index.html#about"] {
-    display: none;
-  }
-}
-.hld-navigation {
-  padding: 2em 0;
-  max-width: 55em;
-  margin: 0 auto;
-  position: relative;
-}
-
-.hld-header {
-  padding: 6em 2em 3em 2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
+  padding: 3em;
+  font-family: "Muli";
+  font-size: 20px;
   color: white;
-  text-align: center;
-}
-.hld-header .ld-headline {
-  margin-top: 0.3em;
-  text-align: center;
-}
-
-.hld-header--ui-lib {
-  height: 20em;
+  background-image: radial-gradient(
+    0% 101%,
+    rgba(211, 25, 255, 0.72) 0%,
+    rgba(211, 25, 255, 0.71) 0%,
+    #4d4bd4 100%
+  );
+  background-size: 100% 100%;
 }
 
-.hld-nav {
-  width: calc(var(--base) * 30);
-  position: fixed;
-  z-index: 500;
-  left: calc(var(--base) * 5);
-  top: calc(var(--base) * 10);
-  justify-items: end;
+.wrap {
   display: grid;
-  grid-template-columns: auto;
-  grid-auto-rows: calc(var(--base) * 10);
-  grid-auto-flow: row;
-  grid-row-gap: calc(var(--base) * 4);
-}
-
-.hld-nav__item {
-  display: inline-flex;
-  justify-content: flex-end;
-  border-radius: var(--border-radius);
-  font-weight: 900;
-  align-items: center;
-  color: inherit;
-  background: var(--ld-blue);
-  padding: calc(var(--base) * 2) calc(var(--base) * 3);
-  text-decoration: none;
-  transform: rotate(-35deg);
-  transform-origin: 100% 50%;
-  transition: transform 350ms cubic-bezier(0.39, 1.8, 0.15, 0.68);
-}
-.ld-cta {
-  background: var(--ld-yellow);
-  color: var(--ld-dark);
-}
-@media (max-width: 800px) {
-  .hld-nav {
-    width: 100%;
-    top: calc(var(--base) * 5);
-    padding: 0 calc(var(--base) * 5);
-    justify-content: space-between;
-    left: 0;
-    grid-auto-flow: column;
-  }
-  .hld-nav__item {
-    transform: rotate(0);
-  }
-}
-
-.hld-content {
-  padding: 3em calc(var(--base) * 5) 0;
-  max-width: 55em;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  max-width: 1600px;
+  grid-gap: 1em;
   margin: 0 auto;
 }
 
-.hld-section {
-  margin-bottom: 3em;
+.card {
+  --card-color-one: var(--ld-red);
+  --card-color-two: var(--ld-orange);
+  background: white;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.11), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 2em 1.5em;
+  color: var(--ld-grey);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 1em;
 }
-.hld-section__projecthead {
+
+.card h3 {
+  color: var(--card-color-one);
+  font-size: 24px;
+  background: radial-gradient(
+    at 0% 0%,
+    var(--card-color-one),
+    var(--card-color-two)
+  );
+
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.card a {
+  display: inline-block;
   text-align: center;
-  padding: 2.5em;
+  background: var(--card-color-two);
+  font-weight: 400;
+  padding: 0.3em 1em;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.2em;
 }
 
-.hld-tag-group {
-  padding: 0.5em 0 1em 0;
+.card p {
+  margin-bottom: 0.8em;
 }
-
-.hld-resume {
+h1 {
+  font-weight: 900;
   margin: 0;
   padding: 0;
-  width: 100%;
-  list-style-type: none;
-  text-align: center;
+  font-size: 6em;
+  line-height: 1.2em;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
-.hld-resume__role {
-  margin-bottom: 1em;
-}
-.hld-resume__time {
-  font-size: inherit;
-  display: block;
-  font-weight: 200;
-}
-.hld-resume__position-name {
-  font-size: 1.5em;
+h2 {
+  font-size: 2.5em;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
 }
 
-.hld-resume__company {
-  font-weight: 700;
-  font-size: 1em;
-  padding-bottom: 3em;
+h3 {
+  margin: 0;
+  margin-bottom: 0.8em;
+  padding: 0;
+}
+h4 {
+  font-size: 24px;
+  margin-bottom: 0.8em;
 }
 
-.hld-siteadmin-nav {
-  width: 250px;
-  height: 373px;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 2.5em;
-}
-.hld-siteadmin-nav__image {
-  display: block;
-  opacity: 0;
-  width: 100%;
-  left: 0;
-  top: 0;
-  position: absolute;
-}
-.hld-siteadmin-nav__image:first-child {
-  animation: first 15s linear infinite;
-}
-.hld-siteadmin-nav__image {
-  animation: second 15s linear infinite;
-}
-.hld-siteadmin-nav__image:last-child {
-  animation: last 15s linear infinite;
+p {
+  margin: 0;
+  line-height: 1.5;
 }
 
-@keyframes first {
-  0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-  }
-}
-
-@keyframes second {
-  25% {
-    opacity: 0;
-  }
-  30%,
-  55% {
-    opacity: 1;
-  }
-}
-@keyframes last {
-  55% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.hld-image {
-  margin: 0 auto 3em;
-  display: block;
-  max-width: 100%;
-}
-
-.hld-cta {
-}
-
-.hld-footer {
-  color: white;
-  display: flex;
-  justify-content: center;
-  flex-flow: column wrap;
-  text-align: center;
-}
-.hld-footer__cta {
-  position: relative;
-  z-index: 600;
-  color: var(--ld-light);
-  background: var(--ld-dark);
-  padding: 2em 1em;
-}
-
-.hld-footer__headline {
-  font-weight: 300;
-  margin: 1em 0;
-}
-.hld-footer__content {
-  padding: 2em 1.5em;
-  margin: 0 auto;
-  max-width: 29em;
-  text-align: left;
-}
-.hld-footer__link {
-  font-weight: 700;
-  display: block;
-  margin-bottom: 1em;
-}
-.hld-footer__divider {
+a {
   background: white;
-}
-.hld-footer__end {
-  width: 100%;
-  max-width: 50em;
-  font-size: 0.8em;
-  display: block;
-  margin: 0 auto;
-  padding-bottom: 2.5em;
-}
-
-.print {
-  display: none;
-}
-@media print {
-  .print {
-    display: block;
-    color: black;
-  }
-  .hld-content {
-    padding: 0 3em;
-  }
-  .screen {
-    display: none;
-  }
-  .ld-topbar,
-  .hld-footer__cta,
-  #work,
-  .hld-footer__content,
-  .hld-footer__end {
-    display: none;
-  }
-  .hld-section {
-    page-break-after: always;
-  }
-  #resume {
-    page-break-after: avoid;
-  }
-  .hld-header {
-    color: black;
-  }
-  .ld-tags {
-    background-color: green;
-  }
-}
-
-.hld-cfc {
-  display: flex;
-  flex-direction: column;
-  -ms-align-items: center;
-  align-items: center;
-  align-content: center;
-  background: var(--ld-yellow);
-  color: var(--ld-really-dark);
   padding: 1em;
-  margin: 0 auto 6em;
-  box-shadow: 0.5em 0.5em 0 0 var(--ld-blue);
-  transform: rotate(-3deg);
+  border-radius: 0.5em;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--ld-blue);
+}
+header {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  grid-column: 1/3;
 }
 
-#lasse + #kristina:first-child {
-  visibility: visible;
-  content: "skadi";
+main {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-gap: 2em;
+}
+
+footer {
+  grid-column: 1/4;
+}
+
+.journey {
+  grid-column: 1/3;
+}
+.links {
+  grid-gap: 1em;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-bottom: 1em;
+}
+@media (max-width: 1400px) {
+  body {
+    font-size: 18px;
+  }
+  header {
+    grid-column: 1/4;
+  }
+  main {
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto;
+    grid-column: 1/4;
+  }
+  .wrap {
+    grid-template-rows: auto auto auto;
+  }
+}
+
+@media (max-width: 1090px) {
+  main {
+    grid-template-columns: repeat(5, auto);
+  }
+  h1 {
+    font-size: 4em;
+  }
+  .card {
+    grid-column: 3/6;
+  }
+  .card:first-child,
+  .card:last-child {
+    grid-column: 1/5;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    padding: 1em;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  .card:first-child,
+  .card:last-child {
+    grid-column: 1/6;
+  }
+  .card {
+    grid-column: 1/6;
+  }
+  .links {
+    grid-template-columns: 1fr 1fr;
+  }
 }
