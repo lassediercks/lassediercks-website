@@ -26,6 +26,12 @@ body {
     rgba(211, 25, 255, 0.71) 0%,
     #4d4bd4 100%
   );
+  background-image: -webkit-radial-gradient(
+    0% 101%,
+    rgba(211, 25, 255, 0.72) 0%,
+    rgba(211, 25, 255, 0.71) 0%,
+    #4d4bd4 100%
+  );
   background-size: 100% 100%;
 }
 
