@@ -1,7 +1,6 @@
 ---
 title: "The bigger picture"
 date: 2018-05-02T16:34:54+02:00
-draft: true
 ---
 
 On the 1.1. of 2017 I started freelancing.
@@ -38,6 +37,6 @@ Big Corporations will suffer. Not die but suffer and eventually get smaller.
 Because I have to try to make a change. At least try it.
 
 I will create Content and Products that result in a new mindset of work. A mindset that is rooted in humanity and equality. I will create Companies that serve a human intention, not the money.
-I want to connect people with noble intentions and support and guide their actions to make a change. I want to declare a limit of what is financially needed so we can finally start creating companies for the greater good, not the greater money.
+I want to support, connect and guide people with noble so their actions to make a change. I want to declare a limit of what is financially needed so we can finally start creating companies for the greater good, not the greater money.
 
 Follow me, It's going to be a hell of a journey.
