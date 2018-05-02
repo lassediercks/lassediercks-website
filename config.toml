@@ -3,6 +3,5 @@ languageCode = "de"
 title = "Lasse Diercks"
 GoogleAnalytics = "UA-25133681-1"
 
-params:
-  author: Lasse Diercks
-  description: I help people to succeed in the web.
+[params]
+  description = "Independent Web Advocate"

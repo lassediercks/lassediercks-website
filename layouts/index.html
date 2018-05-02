@@ -1,18 +1,14 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 
-  <main>
+  <main >
 
-      {{ $services := (where .Pages "Section" "services") }}
-      {{ range ($services) }}
-        {{ partial "services_summary.html" . }}
+      {{ $posts := (where .Pages "Section" "posts") }}
+      {{ range ($posts) }}
+        {{ partial "post.html" . }}
       {{ end }}
 
   </main>
-    <div class="journey">
-      <h4>About my Journey</h4>
-      <p>I created online marketing campaigns, conducted user tests, designed interfaces & implemented interfaces, fixed unit tests, refactored mysql queries, managed a product team and called my boss out of the bed at 3am because of a bug.</p>
-    </div>
 
 
 {{ partial "footer.html" . }}

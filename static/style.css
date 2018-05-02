@@ -1,0 +1,50 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  padding: calc(var(--base) * 10) calc(var(--base) * 5);
+  margin: 0 auto;
+  max-width: 48em;
+  width: 100%;
+  display: grid;
+  align-content: center;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 1em;
+  grid-template-rows: auto auto;
+}
+header .ld-avatar {
+  grid-row: 1/3;
+}
+.site-title {
+  align-self: end;
+  text-decoration: none;
+  color: inherit;
+}
+.site-title,
+.site-description {
+  grid-column: 2;
+}
+main {
+  padding: calc(var(--base) * 5);
+  max-width: 48em;
+  width: 100%;
+  margin: 0 auto;
+}
+
+footer {
+  padding: calc(var(--base) * 5);
+}
+
+.footer-links {
+  max-width: 48em;
+  width: 100%;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+
+  grid-row-gap: var(--base);
+  margin-bottom: calc(var(--base) * 4);
+}
