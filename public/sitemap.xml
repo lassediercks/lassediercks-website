@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://lassediercks.de/posts/france/france/</loc>
+    <lastmod>2018-05-03T23:20:10+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://lassediercks.de/posts/thebiggerpicture/</loc>
     <lastmod>2018-05-02T16:34:54+02:00</lastmod>
   </url>
@@ -14,22 +19,13 @@
   
   <url>
     <loc>https://lassediercks.de/</loc>
-    <lastmod>2018-05-02T16:34:54+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lassediercks.de/photography/paris/</loc>
-  </url>
-  
-  <url>
-    <loc>https://lassediercks.de/photography/</loc>
+    <lastmod>2018-05-03T23:20:10+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://lassediercks.de/posts/</loc>
-    <lastmod>2018-05-02T16:34:54+02:00</lastmod>
+    <lastmod>2018-05-03T23:20:10+02:00</lastmod>
     <priority>0</priority>
   </url>
   

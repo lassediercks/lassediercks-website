@@ -5,3 +5,8 @@ GoogleAnalytics = "UA-25133681-1"
 
 [params]
   description = "Independent Web Advocate"
+
+
+uglyurls = true
+#[permalinks]
+post = "/:year/:month/:day/:slug/"
