@@ -1,5 +1,5 @@
 ---
-title: "New Year Holiday 2017-2018"
+title: "New Year Trip 2017-2018"
 date: 2018-05-03T23:20:10+02:00
 ---
 
