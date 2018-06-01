@@ -5,6 +5,7 @@ GoogleAnalytics = "UA-25133681-1"
 
 [params]
   description = "Independent Web Advocate"
+  og_image = "/img/open-graph.png"
 
 
 uglyurls = true
