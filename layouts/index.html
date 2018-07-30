@@ -1,14 +1,11 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
+{{ partial "social.html" . }}
 
-  <main >
 
-      {{ $posts := (where .Pages "Section" "posts") }}
-      {{ range ($posts) }}
-        {{ partial "post.html" . }}
-      {{ end }}
-
-  </main>
-
+<main>
+    {{ .Content }}
+</main>
+     
 
 {{ partial "footer.html" . }}
