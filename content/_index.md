@@ -18,7 +18,7 @@ In 2,5 years freelancing I wasn't able to find a title or role that's why I'd li
 
 {{< sectionlink img="Nextdoingdone.png" title="Next Doing Done" description="A german Podcast about modern working" href="https://nextdoingdone.de" >}}
 
-{{< sectionlink img="Photography.png" href="https://instagram.com/lassediercks" title="Photography" >}}
+{{< sectionlink img="Photography.png" href="https://photography.lassediercks.de" title="Photography" >}}
 
 {{< sectionlink img="Youtube.png" title="Youtube" href="https://www.youtube.com/channel/UCkdDfXiHbZnoqFjN9eLXDvA?view_as=subscriber" description="My 2 cents in motion" >}}
 
