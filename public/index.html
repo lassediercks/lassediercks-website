@@ -98,15 +98,6 @@ fbq("track", "PageView");
 <p>In 2,5 years freelancing I wasn&rsquo;t able to find a title or role that&rsquo;s why I&rsquo;d like to invite you to check out the diverse stuff I do.</p>
 
 <div class="ldw-sectiongrid">
-<a href="/ui-engineering" style="background-image: url(/img/freelancing.png)" class="ldw-sectionlink ">
-    <h2 class="ldw-sectionlink__title">UI Engineering</h2>
-    <p class="ldw-sectionlink__description">Helping companies build in the web</p>
-</a>
-
-<a href="/coaching"  class="ldw-sectionlink ldw-sectionlink--coaching">
-    <h2 class="ldw-sectionlink__title">Coaching</h2>
-    <p class="ldw-sectionlink__description">Helping SMB owners to focus on what matters</p>
-</a>
 
 <a href="https://mutualistic.systems" style="background-image: url(/img/mutualistic.png)" class="ldw-sectionlink ">
     <h2 class="ldw-sectionlink__title">Mutualistic</h2>
@@ -149,7 +140,154 @@ You think we should do something exciting together?
 </div>
 
 </main>
-     
+<div id='collection-component-865087adea0'></div>
+<script type="text/javascript">
+ 
+
+(function () {
+  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+  if (window.ShopifyBuy) {
+    if (window.ShopifyBuy.UI) {
+      ShopifyBuyInit();
+    } else {
+      loadScript();
+    }
+  } else {
+    loadScript();
+  }
+
+  function loadScript() {
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = scriptURL;
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+    script.onload = ShopifyBuyInit;
+  }
+
+  function ShopifyBuyInit() {
+    var client = ShopifyBuy.buildClient({
+      domain: 'lasse-diercks-photos.myshopify.com',
+      storefrontAccessToken: '995651c67df72fe06fdc429a3135cc76',
+    });
+
+    ShopifyBuy.UI.onReady(client).then(function (ui) {
+      ui.createComponent('collection', {
+        id: 65335853115,
+        node: document.getElementById('collection-component-865087adea0'),
+        moneyFormat: '%E2%82%AC%7B%7Bamount_with_comma_separator%7D%7D',
+        options: {
+  "product": {
+    "buttonDestination": "checkout",
+    "variantId": "all",
+    "contents": {
+      "imgWithCarousel": false,
+      "variantTitle": false,
+      "description": false,
+      "buttonWithQuantity": false,
+      "quantity": false
+    },
+    "text": {
+      "button": "Buy This Print"
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "calc(33.33333% - 30px)",
+          "margin-left": "30px",
+          "margin-bottom": "50px",
+          "width": "calc(33.33333% - 30px)"
+        }
+      },
+      "button": {
+        "background-color": "#4a84ff",
+        ":hover": {
+          "background-color": "#4377e6"
+        },
+        "border-radius": "2px",
+        ":focus": {
+          "background-color": "#4377e6"
+        }
+      }
+    }
+  },
+  "cart": {
+    "contents": {
+      "button": true
+    },
+    "styles": {
+      "button": {
+        "background-color": "#4a84ff",
+        ":hover": {
+          "background-color": "#4377e6"
+        },
+        "border-radius": "2px",
+        ":focus": {
+          "background-color": "#4377e6"
+        }
+      },
+      "footer": {
+        "background-color": "#ffffff"
+      }
+    }
+  },
+  "modalProduct": {
+    "contents": {
+      "img": false,
+      "imgWithCarousel": true,
+      "variantTitle": false,
+      "buttonWithQuantity": true,
+      "button": false,
+      "quantity": false
+    },
+    "styles": {
+      "product": {
+        "@media (min-width: 601px)": {
+          "max-width": "100%",
+          "margin-left": "0px",
+          "margin-bottom": "0px"
+        }
+      },
+      "button": {
+        "background-color": "#4a84ff",
+        ":hover": {
+          "background-color": "#4377e6"
+        },
+        "border-radius": "2px",
+        ":focus": {
+          "background-color": "#4377e6"
+        }
+      }
+    }
+  },
+  "toggle": {
+    "styles": {
+      "toggle": {
+        "background-color": "#4a84ff",
+        ":hover": {
+          "background-color": "#4377e6"
+        },
+        ":focus": {
+          "background-color": "#4377e6"
+        }
+      }
+    }
+  },
+  "productSet": {
+    "styles": {
+      "products": {
+        "@media (min-width: 601px)": {
+          "margin-left": "-30px"
+        }
+      }
+    }
+  }
+}
+      });
+    });
+  }
+})();
+ 
+</script>
 
 
 <footer>
