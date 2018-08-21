@@ -1,6 +1,6 @@
 ---
-title: "Lasse Diercks"
-og_image: "/img/open-graph.jpg"
+title: 'Lasse Diercks'
+og_image: '/img/open-graph.jpg'
 ---
 
 Based in Hamburg but with a propensity to feel home wherever good people are. I used to be an employed ui engineer (the people who write awesome HTML & CSS) but feel more comfortable doing multiple things as an independent.
@@ -8,9 +8,6 @@ Based in Hamburg but with a propensity to feel home wherever good people are. I 
 In 2,5 years freelancing I wasn't able to find a title or role that's why I'd like to invite you to check out the diverse stuff I do.
 
 <div class="ldw-sectiongrid">
-{{< sectionlink title="UI Engineering" href="/ui-engineering" img="freelancing.png" description="Helping companies build in the web" >}}
-
-{{< sectionlink title="Coaching" description="Helping SMB owners to focus on what matters" class="ldw-sectionlink--coaching" href="/coaching" >}}
 
 {{< sectionlink title="Mutualistic" img="mutualistic.png" description="A high end frontend consultancy team" href="https://mutualistic.systems" >}}
 
