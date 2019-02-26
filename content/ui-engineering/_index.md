@@ -1,8 +1,8 @@
 ---
-title: "Ui Engineering"
+title: 'Ui Engineering'
 ---
 
-# Let me bring your ideas to life
+# Let me help you build good things right
 
 Ui engineering is where I'm the most experienced at and call myself an expert.
 
@@ -26,8 +26,7 @@ on the other Hand
 
 <ul class="ld-list">
     <li class="ld-list__item">you value an accessible open web</li>
-    <li class="ld-list__item">you have a medium sized product development team (5-20)</li>
-    <li class="ld-list__item">you work or want to work agile</li>
+    <li class="ld-list__item">you have problems achieving a consistent product design</li>
     <li class="ld-list__item">you are setup for remote workers or have an office in Hamburg.</li>
 </ul>
 
@@ -41,5 +40,7 @@ I had the incredible honor to work together with
 
 <a class="ld-link" href="https://xing.com">Xing</a>
 <a class="ld-link" href="https://jimdo.com">Jimdo</a>
+<a class="ld-link" href="http://superluminar.io/">Superluminar</a>
+<a class="ld-link" href="http://cellular.de/">Cellular</a>
 <a class="ld-link" href="http://sumcumo.com/">Sumcumo</a>
 <a class="ld-link" href="http://diginights.com/">Diginights</a>

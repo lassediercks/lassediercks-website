@@ -11,6 +11,8 @@ In 2,5 years freelancing I wasn't able to find a title or role that's why I'd li
 
 {{< sectionlink title="Schubrakede" img="schubrakede.png" description="An Agency for Small Business" href="https://schubrake.de" >}}
 
+{{< sectionlink img="freelancing.png" title="UI-Engineering" description="Bridging Design and Developement" href="/ui-engineering" >}}
+
 {{< sectionlink img="Patternson.png" title="Patternson" description="A Stencil Component Library Platform" href="https://patternson.io" >}}
 
 {{< sectionlink img="Nextdoingdone.png" title="Next Doing Done" description="A german Podcast about modern working" href="https://nextdoingdone.de" >}}
