@@ -9,7 +9,7 @@ In 2,5 years freelancing I wasn't able to find a title or role that's why I'd li
 
 <div class="ldw-sectiongrid">
 
-{{< sectionlink title="Schubrakede" img="schubrakede.png" description="An Agency for Small Business" href="https://schubrake.de" >}}
+{{< sectionlink title="Schubrakede" img="schubrakede.png" description="An Agency for Small Businesses" href="https://schubrake.de" >}}
 
 {{< sectionlink img="freelancing.png" title="UI-Engineering" description="Bridging Design and Developement" href="/ui-engineering" >}}
 
