@@ -9,17 +9,11 @@ In 2,5 years freelancing I wasn't able to find a title or role that's why I'd li
 
 <div class="ldw-sectiongrid">
 
-{{< sectionlink title="Schubrakede" img="schubrakede.png" description="An Agency for Small Businesses" href="https://schubrake.de" >}}
+{{< sectionlink title="Schubrakede" img="schubrakede.png" description="Iterative Development Studio" href="https://schubrake.de" >}}
 
 {{< sectionlink img="freelancing.png" title="UI-Engineering" description="Bridging Design and Developement" href="/ui-engineering" >}}
 
-{{< sectionlink img="Patternson.png" title="Patternson" description="A Stencil Component Library Platform" href="https://patternson.io" >}}
-
-{{< sectionlink img="Nextdoingdone.png" title="Next Doing Done" description="A german Podcast about modern working" href="https://nextdoingdone.de" >}}
-
 {{< sectionlink img="Photography.png" href="https://photography.lassediercks.de" title="Photography" >}}
-
-{{< sectionlink img="Youtube.png" title="Youtube" href="https://www.youtube.com/channel/UCkdDfXiHbZnoqFjN9eLXDvA?view_as=subscriber" description="My 2 cents in motion" >}}
 
 {{< sectionlink img="lullabyjam.png" title="Lullaby Jam" description="Guitar Jam to put my son asleep" href="https://anchor.fm/lullabyjam" >}}
 

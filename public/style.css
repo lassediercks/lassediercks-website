@@ -113,7 +113,7 @@ footer .ld-button {
   display: grid;
   justify-content: center;
   align-content: center;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(2, minmax(auto, 526px));
   grid-gap: 25px;
   margin-bottom: 50px;
 }
@@ -128,8 +128,6 @@ footer .ld-button {
   text-decoration: none;
   display: inline-block;
   border-radius: 10px;
-  width: 100%;
-  max-width: 526px;
   height: 299px;
 
   color: white;
