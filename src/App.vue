@@ -3,7 +3,7 @@
     <header>
       <img src="/lasse.jpg" class="profile-image" alt="" />
       <div class="header-content">
-        <h1>Lasse Diercks</h1>
+        <h1>{{ Metainfo.title }}</h1>
         <div class="social">
           <a v-for="link in socialLinks" :href="link.href" :key="link.label">{{
             link.label
@@ -15,20 +15,22 @@
       <h2 id="cv">About</h2>
       <p class="about-text">
         I'm a 1989 born generalist that makes a living by being a freelance
-        UI-Engineer. While I do enjoy being a techncial expert I'm trying to
+        UI-Engineer. While I do enjoy being a technical expert I'm trying to
         shift my journey towards a more complexity informed way of working. One
-        outcome of this
-        <a href="https://schubrake.de">is the company Schubrakede</a> I founded
-        with <a href="https://xiphe.net"> my beloved brother Hannes </a>.
+        outcome of this is
+        <a href="https://schubrake.de"> the company Schubrakede</a> I founded
+        with my <a href="https://xiphe.net">beloved brother Hannes.</a>
         <br /><br />
-        When not spending my time on working, side projects & learning I'm most
-        likely building Duplo Towers my son and wife, playing the guitar or
-        doing photography.
+        When not working or learning I'm most likely building Duplo Towers with
+        my son and wife, playing the guitar or
+        <a href="https://photography.lassediercks.de">
+          doing photography.
+        </a>
       </p>
       <h2 id="cv">Curriculum Vitae</h2>
       <div v-for="entry in Cv" :key="entry.when" class="entry">
         <div class="became-freelancer" v-if="entry.company === 'Jimdo'">
-          Became a Freelancer
+          I Became a Freelancer
         </div>
         <div class="time">{{ entry.when }}</div>
         <div class="company-details">
@@ -69,12 +71,14 @@
 import { Component, Vue } from 'vue-property-decorator';
 import Tags from './components/tags.vue';
 import Cv from './cv.json';
+import Metainfo from './metainfo.json';
 
 @Component({
   components: { Tags },
   data() {
     return {
       Cv,
+      Metainfo,
       socialLinks: [
         { href: 'https://twitter.com/lassediercks', label: 'Twitter' },
         { href: 'https://instagram.com/lassediercks', label: 'Instagram' },
@@ -84,6 +88,19 @@ import Cv from './cv.json';
         { href: 'https://open.spotify.com/user/lassediercks', label: 'Spotify' }
       ]
     };
+  },
+  metaInfo: {
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { property: 'og:site_name', content: Metainfo.title },
+      { property: 'og:title', content: Metainfo.title },
+      { name: 'twitter:title', content: Metainfo.title },
+      { name: 'description', content: Metainfo.description },
+      { property: 'og:description', content: Metainfo.description },
+      { name: 'twitter:description', content: Metainfo.description }
+    ],
+    title: Metainfo.title
   }
 })
 export default class App extends Vue {}
