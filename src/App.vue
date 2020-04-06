@@ -99,6 +99,7 @@ import Metainfo from './metainfo.json';
       { name: 'description', content: Metainfo.description },
       { property: 'og:description', content: Metainfo.description },
       { name: 'twitter:description', content: Metainfo.description },
+      { name: 'twitter:site', content: '@lassediercks' },
       { name: 'twitter:card', content: 'summary' }
     ],
     title: Metainfo.title
