@@ -95,12 +95,8 @@ import Metainfo from './metainfo.json';
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { property: 'og:site_name', content: Metainfo.title },
       { property: 'og:title', content: Metainfo.title },
-      { name: 'twitter:title', content: Metainfo.title },
       { name: 'description', content: Metainfo.description },
-      { property: 'og:description', content: Metainfo.description },
-      { name: 'twitter:description', content: Metainfo.description },
-      { name: 'twitter:site', content: '@lassediercks' },
-      { name: 'twitter:card', content: 'summary' }
+      { property: 'og:description', content: Metainfo.description }
     ],
     title: Metainfo.title
   }
