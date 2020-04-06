@@ -98,7 +98,8 @@ import Metainfo from './metainfo.json';
       { name: 'twitter:title', content: Metainfo.title },
       { name: 'description', content: Metainfo.description },
       { property: 'og:description', content: Metainfo.description },
-      { name: 'twitter:description', content: Metainfo.description }
+      { name: 'twitter:description', content: Metainfo.description },
+      { name: 'twitter:card', content: 'summary' }
     ],
     title: Metainfo.title
   }
