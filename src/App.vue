@@ -12,7 +12,7 @@
       </div>
     </header>
     <main>
-      <h2 id="cv">About</h2>
+      <h2 id="about">About</h2>
       <p class="about-text">
         I'm a 1989 born generalist that makes a living by being a freelance
         UI-Engineer. While I do enjoy being a technical expert I'm trying to
