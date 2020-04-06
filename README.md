@@ -1,26 +1,29 @@
-[![Love and Peace](http://love-and-peace.github.io/love-and-peace/badges/base/v1.0.svg)](https://github.com/love-and-peace/love-and-peace/blob/master/versions/base/v1.0/en.md)
+# src
 
-# lassediercks website
+## Project setup
+```
+npm install
+```
 
-This is the sourcecode for my [website](http://lassediercks.de/)
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-It's powered by my [pattern library](http://lassediercks.github.io/design)
+### Compiles and minifies for production
+```
+npm run build
+```
 
-## why github?
+### Run your tests
+```
+npm run test
+```
 
-I like to manage things with github issues
+### Lints and fixes files
+```
+npm run lint
+```
 
-## why transparent?
-
-I'm always curious how other websites are working so I have no hard feeling about sharing mine.
-
-
-## local setup
-
-you should be fine with
-
-`npm i && npm start`
-
-## anything I could do better?
-
-There is always something worth improving, I'd love to know what you think. Just create an issue or [write me on twitter](http://www.twitter.com/lassediercks)
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

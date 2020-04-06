@@ -1,0 +1,291 @@
+    [
+        {
+            "company": "CandleScience",
+            "companyDescription": "is a wax & candle supply online shop based in North Carolina/Usa",
+            "website": "https://www.candlescience.com/",
+            "when": "02/2020 - 04/2020",
+            "projects": [
+                {
+                    "title": "Applying a new design for a running ecommerce",
+                    "description": "I helped candlescience to implement a redesign from scratch. The technical Stack was VueJS + Nuxt. For longlife maintainability I introduced the concept of a small scale design system and self contained components to establish a coherent user experience at a low maintance effort.",
+                    "tags": [
+                        "VueJS",
+                        "NuxtJS",
+                        "CircleCI",
+                        "Netlify",
+                        "SCSS",
+                        "Styleguide",
+                        "Component Library",
+                        "Responsive",
+                        "Accessible"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Fielmann",
+            "companyDescription": "is an german eye wear company, the biggest in europe and the market leader in germany.",
+            "website": "https://fielmann.de",
+            "when": "08/2019 - 03/2020",
+            "projects": [
+                {
+                    "title": "Bridging the Gap between Design and Development",
+                    "description": "Fielmann already had a design system that was entirely focused at designer. I helped them to make that design system consumable for developers. That mainly included implementing the existing design patterns in code and distribute them in a different granularities",
+                    "tags": [
+                        "ReactJS",
+                        "Styleguidist",
+                        "NodeJS",
+                        "CircleCI",
+                        "SCSS",
+                        "Component Library",
+                        "Semantic Versioning",
+                        "NPM",
+                        "Design System"
+                    ]
+                },
+                {
+                    "title": "Prototyping a Realtime experience",
+                    "description": "As the only technical person in a design team I set up prototypes with novel technologies to help to create a project coherence but also to focus on the unknowns",
+                    "tags": [
+                        "VueJS",
+                        "ReactJS",
+                        "Firebase",
+                        "Netlify",
+                        "Styled Components",
+                        "PWA",
+                        "GraphQL",
+                        "Rapid Prototyping",
+                        "OOUX"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Brandeins",
+            "companyDescription": "is an independ business magazine with a monthly print issue.",
+            "website": "https://Brandeins.de",
+            "when": "06/2019 - 10/2019",
+            "projects": [
+                {
+                    "title": "Implementing a mobile experience for a serious brand",
+                    "description": "I helped brandeins to implement their planned redesign to create a consistent responsive user experience. My job was to take an existing design from an agency and implement the frontend from scratch in VueJs. The Challening part was to orchestrate the redesign with tons of already existing content.",
+                    "tags": [
+                        "VueJS",
+                        "Responsive"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Cognitive Edge",
+            "companyDescription": "is a complexity informed consultant Company",
+            "website": "https://cognitive-edge.com/",
+            "when": "04/2019 - 12/2019",
+            "projects": [
+                {
+                    "title": "Cynefin® FOUNDATIONS online course",
+                    "description": "Due to sense of misuage of agile and an overconsumption of Dave Snowden videos on youtube I decided to invest in an online course of cognitive Edge. The lessons learned in this course stick with me ever since.",
+                    "tags": [
+                        "Complexity",
+                        "Coherence",
+                        "Constraints"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "IFBHH",
+            "companyDescription": "is the state development bank for Hamburg, Germany",
+            "website": "https://ifbhh.de",
+            "when": "02/2019 - 04/2019",
+            "projects": [
+                {
+                    "title": "Scaffolding a project",
+                    "description": "I helped the agency cellular to implement an inhouse crafted redesign for the ifb. My job was to setup the initial skeleton of the website as well as integrating the most used ui components for later reuse by other developers.",
+                    "tags": [
+                        "ReactJS",
+                        "Typescript",
+                        "GraphQL"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "A1",
+            "companyDescription": "is a telecommunications corporation in Austria",
+            "website": "https: //www.a1.net/",
+            "when": "10/2018 - 12/2018",
+            "projects": [
+                {
+                    "title": "Using web technolygies on a TV",
+                    "description": "A1 ships Television boxes to their customer. My job was to implement a redesigned UI created by the agency cellular to run on their domestically distrubuted boxes.",
+                    "tags": [
+                        "SVN",
+                        "HTML",
+                        "CSS",
+                        "JS",
+                        "Perl"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Budni",
+            "companyDescription": "is the fourth largest drug store company chain in germany",
+            "website": "https: //budni.de",
+            "when": "07/2018 - 11/2018",
+            "projects": [
+                {
+                    "title": "Scaffold a new UI for retail",
+                    "description": "I helped the agency cellular to implement an inhouse crafted redesign for budni. My job was to create the initial website skeleton and UI components that could display a wide range of products",
+                    "tags": [
+                        "ReactJS",
+                        "Responsive",
+                        "Styleguide"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Xing",
+            "companyDescription": "is the german version of linkedIn",
+            "website": "https: //xing.com",
+            "when": "10/2018",
+            "projects": [
+                {
+                    "title": "Enable teams to self-administrate Data Gouvernance",
+                    "description": "I helped xing to rapidly setup an internal tool for data gouvernance administration to be able to fulfill the european gdpr conditions",
+                    "tags": [
+                        "ReactJS",
+                        "GraphQL"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Boehringer Ingelheim",
+            "companyDescription": "is one of the world's largest pharmaceutical companies.",
+            "website": "https: //www.boehringer-ingelheim.com/",
+            "when": "06/2018 - 08/2018",
+            "projects": [
+                {
+                    "title": "Life with pulmonary fibrosis",
+                    "link": "https://www.lifewithpulmonaryfibrosis.com/",
+                    "description": "I helped the agency factorial to implement an design that was created by an external agency. My job was to implement the ui components that display the content which was created by a team of writers.",
+                    "tags": [
+                        "Drupal",
+                        "PHP",
+                        "HTML",
+                        "CSS"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "sum.cumo",
+            "companyDescription": "is a service agency for insurances.",
+            "website": "https: //wwwsucumo.com/",
+            "when": "01/2018 - 05/2018",
+            "projects": [
+                {
+                    "description": "I helped sum.cumo to establish a way of dissecting repetitive ui components from client projects to make them reusable and maintainable across client projects",
+                    "tags": [
+                        "NuxtJS",
+                        "VueJS",
+                        "Styleguide"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Xing",
+            "companyDescription": "is the german version of linkedIn",
+            "website": "https: //xing.com",
+            "when": "06/2017 - 12/2017",
+            "projects": [
+                {
+                    "title": "Discover and document a Design Language",
+                    "description": "I helped xing to establish a comprehensive design system that was lateron used by more than 30 developement teams. My job was to create components and to establish processes in the company that support a shared language for user interfacte components",
+                    "tags": [
+                        "ReactJS",
+                        "Flow",
+                        "Jest",
+                        "PostCSS"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Jimdo",
+            "companyDescription": "is a german website builder, comparable to wix/squarespace ",
+            "website": "https: //www.jimdo.com/",
+            "when": "2011 - 12/2016",
+            "projects": [
+                {
+                    "title": "Establish a UI-Library",
+                    "link": "http://jimdo.github.io/ui-library/#/",
+                    "description": "A small group of informal people (including me) managed to establish a ui-component library to tackle the immense consistency problems jimdo was struggling with.",
+                    "tags": [
+                        "NodeJS",
+                        "Styleguide",
+                        "CircleCI",
+                        "ReactJS"
+                    ]
+                },
+                {
+                    "title": "Build templates and the template interaction interface",
+                    "description": "As part of the so called Template Team I built website templates but also the cms interface to select & adjust your template to your needs. My Job was design, frontend developer and partially Product owner",
+                    "tags": [
+                        "NodeJS",
+                        "ReactJS",
+                        "Heroku",
+                        "Sketch",
+                        "UnitTesting",
+                        "Usability Tests",
+                        "Product Management"
+                    ]
+                },
+                {
+                    "title": "Built intuitive wysiwyg interfaces",
+                    "description": "The wysiwyg interface was a constent subject of support requests so improving the overall look and feel of the interface but also touching single components and giving them a more intuitive behaviour was part of my job",
+                    "tags": [
+                        "Cucumber",
+                        "Jenkins",
+                        "HTML",
+                        "CSS"
+                    ]
+                },
+                {
+                    "title": "Conversion based Online marketing design",
+                    "description": "I started at the online marketing department of jimdo where my job was to create landingpages based on SEA keywords with a tightly coupled connection to the marketing department",
+                    "tags": [
+                        "Google Adwords",
+                        "Dreamweaver",
+                        "SCSS",
+                        "Photoshop",
+                        "Illustrator",
+                        "HTML"
+                    ]
+                }
+            ]
+        },
+        {
+            "company": "Membran",
+            "companyDescription": "is a Music Record Company",
+            "website": "http: //www.membran.net/",
+            "when": "2007-2010",
+            "projects": [
+                {
+                    "title": "vocational training",
+                    "description": "Germany has this apprentience concept where you work in a company for 3 years but also visit school a few weeks. In that time I learned print and web design and started to get a basic grasp of the web fundamentals. It was around the time when we stopped using tables for everything.",
+                    "tags": [
+                        "InDesign",
+                        "QuarkExpress",
+                        "Print Preparation",
+                        "early HTML",
+                        "early CSS"
+                    ]
+                }
+            ]
+        }
+    ]
