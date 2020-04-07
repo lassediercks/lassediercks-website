@@ -94,14 +94,23 @@
 import { Component, Vue, Prop } from 'vue-property-decorator';
 import Tags from './components/tags.vue';
 import Cv from './cv.json';
-import Metainfo from './metainfo.json';
+import metajson from './metainfo.json';
 
 @Component({
   components: { Tags },
   data() {
     return {
+      metadata: metajson
+    };
+  }
+})
+export default class App extends Vue {
+  @Prop() private timeColor!: string;
+  @Prop() private metadata!: any;
+
+  data() {
+    return {
       Cv,
-      Metainfo,
       timeColor: null,
       socialLinks: [
         { href: 'https://twitter.com/lassediercks', label: 'Twitter' },
@@ -112,21 +121,7 @@ import Metainfo from './metainfo.json';
         { href: 'https://open.spotify.com/user/lassediercks', label: 'Spotify' }
       ]
     };
-  },
-  metaInfo: {
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { property: 'og:site_name', content: Metainfo.title },
-      { property: 'og:title', content: Metainfo.title },
-      { name: 'description', content: Metainfo.description },
-      { property: 'og:description', content: Metainfo.description }
-    ],
-    title: Metainfo.title
   }
-})
-export default class App extends Vue {
-  @Prop() private timeColor!: string;
 
   mounted() {
     const today = new Date();
@@ -136,6 +131,20 @@ export default class App extends Vue {
     console.log(
       `When you loaded this page ${minutes} minutes have already passed today, you're getting a color with the hue value ${hslAmount}`
     );
+  }
+
+  metaInfo() {
+    return {
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { property: 'og:site_name', content: this.metadata.title },
+        { property: 'og:title', content: this.metadata.title },
+        { name: 'description', content: this.metadata.description },
+        { property: 'og:description', content: this.metadata.description }
+      ],
+      title: this.metadata.title
+    };
   }
 }
 </script>
