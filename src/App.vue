@@ -102,7 +102,6 @@ import Metainfo from './metainfo.json';
     return {
       Cv,
       Metainfo,
-      timeColor: null,
       socialLinks: [
         { href: 'https://twitter.com/lassediercks', label: 'Twitter' },
         { href: 'https://instagram.com/lassediercks', label: 'Instagram' },
@@ -126,16 +125,11 @@ import Metainfo from './metainfo.json';
   }
 })
 export default class App extends Vue {
-  @Prop() private timeColor!: string;
-
-  mounted() {
+  public get timeColor(): string {
     const today = new Date();
     const minutes = today.getHours() * 60 + today.getMinutes();
     const hslAmount = (minutes / 1440) * 360;
-    this.timeColor = `hsl(${hslAmount}, 100%,97%)`;
-    console.log(
-      `When you loaded this page ${minutes} minutes have already passed today, you're getting a color with the hue value ${hslAmount}`
-    );
+    return `hsl(${hslAmount}, 100%,97%)`;
   }
 }
 </script>
