@@ -1,0 +1,18 @@
+@mixin smallscreen {
+  @media (max-width: 775px) {
+    @content;
+  }
+}
+@mixin mediumscreen {
+  @media (max-width: 1185px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 1000px) {
+    @content;
+  }
+}
+$blue: #256cff;
+$onyx: #2c3e50;
+$grey: #cacbcc;

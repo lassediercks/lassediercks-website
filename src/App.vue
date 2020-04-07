@@ -1,64 +1,87 @@
 <template>
-  <div id="app">
+  <div id="app" :style="`--time-color: ${timeColor}`">
     <header>
-      <img src="/lasse.jpg" class="profile-image" alt="" />
       <div class="header-content">
         <h1>{{ Metainfo.title }}</h1>
-        <div class="social">
-          <a v-for="link in socialLinks" :href="link.href" :key="link.label">{{
-            link.label
-          }}</a>
+        <span class="description">Web & Complexity</span>
+        <a href="mailto:hello@lassediercks.de" class="header-link"
+          >Write an E-Mail</a
+        >
+      </div>
+      <img src="/lasse.jpg" class="profile-image" alt="" />
+    </header>
+    <div class="social">
+      <a v-for="link in socialLinks" :href="link.href" :key="link.label">{{
+        link.label
+      }}</a>
+    </div>
+    <main>
+      <div class="about">
+        <h2 id="about">About</h2>
+        <div>
+          <p class="about-text">
+            I'm a 1989 born generalist that makes a living by being a freelance
+            UI-Engineer. While I do enjoy being a technical expert I'm trying to
+            shift my journey towards a more complexity informed way of working.
+            One outcome of this is
+            <a href="https://schubrake.de"> the company Schubrakede</a> I
+            founded with my
+            <a href="https://xiphe.net">beloved brother Hannes.</a> <br /><br />
+            When not working or learning I'm most likely building Duplo Towers
+            with my son and wife, playing the guitar or
+            <a href="https://photography.lassediercks.de">
+              doing photography.
+            </a>
+          </p>
         </div>
       </div>
-    </header>
-    <main>
-      <h2 id="about">About</h2>
-      <p class="about-text">
-        I'm a 1989 born generalist that makes a living by being a freelance
-        UI-Engineer. While I do enjoy being a technical expert I'm trying to
-        shift my journey towards a more complexity informed way of working. One
-        outcome of this is
-        <a href="https://schubrake.de"> the company Schubrakede</a> I founded
-        with my <a href="https://xiphe.net">beloved brother Hannes.</a>
-        <br /><br />
-        When not working or learning I'm most likely building Duplo Towers with
-        my son and wife, playing the guitar or
-        <a href="https://photography.lassediercks.de">
-          doing photography.
-        </a>
-      </p>
-      <h2 id="cv">Curriculum Vitae</h2>
-      <div v-for="entry in Cv" :key="entry.when" class="entry">
-        <div class="became-freelancer" v-if="entry.company === 'Jimdo'">
-          I Became a Freelancer
-        </div>
-        <div class="time">{{ entry.when }}</div>
-        <div class="company-details">
-          <h3 class="company-name">
-            <a :href="entry.website">
-              {{ entry.company }}
-            </a>
-          </h3>
-          <p class="company-description">{{ entry.companyDescription }}</p>
-        </div>
-        <div class="projects">
-          <div
-            class="project"
-            v-for="(project, index) in entry.projects"
-            :key="index"
-          >
-            <h4 v-if="project.title" class="project-title">
-              <a v-if="project.link" :href="project.link">{{
-                project.title
-              }}</a>
-              <template v-if="!project.link">
-                {{ project.title }}
-              </template>
-            </h4>
-            <p class="project-description">{{ project.description }}</p>
-            <Tags :tags="project.tags"></Tags>
+      <div class="cv-wrap">
+        <h2 id="cv">Experience</h2>
+        <div v-for="entry in Cv" :key="entry.when" class="entry">
+          <div class="became-freelancer" v-if="entry.company === 'Jimdo'">
+            I Became a Freelancer
+          </div>
+          <div class="time">{{ entry.when }}</div>
+          <div class="company-details">
+            <h3 class="company-name">
+              <a :href="entry.website">
+                <span>
+                  {{ entry.company }}
+                </span>
+              </a>
+            </h3>
+            <p class="company-description">{{ entry.companyDescription }}</p>
+          </div>
+          <div class="projects">
+            <div
+              class="project"
+              v-for="(project, index) in entry.projects"
+              :key="index"
+            >
+              <h4 v-if="project.title" class="project-title">
+                <a v-if="project.link" :href="project.link">{{
+                  project.title
+                }}</a>
+                <template v-if="!project.link">
+                  {{ project.title }}
+                </template>
+              </h4>
+              <p class="project-description">{{ project.description }}</p>
+              <Tags :tags="project.tags"></Tags>
+            </div>
           </div>
         </div>
+      </div>
+      <div class="waters">
+        <h3>New waters ahead!</h3>
+        <p>
+          I'm currently looking for a new adventure. If you think I could be a
+          valuable addition to your company or you want to aquire some of my
+          skills as a freelancer, let me know.
+        </p>
+        <a href="mailto:hello@lassediercks.de" class="header-link">
+          Write an E-Mail
+        </a>
       </div>
     </main>
     <footer>
@@ -68,7 +91,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Prop } from 'vue-property-decorator';
 import Tags from './components/tags.vue';
 import Cv from './cv.json';
 import Metainfo from './metainfo.json';
@@ -79,6 +102,7 @@ import Metainfo from './metainfo.json';
     return {
       Cv,
       Metainfo,
+      timeColor: null,
       socialLinks: [
         { href: 'https://twitter.com/lassediercks', label: 'Twitter' },
         { href: 'https://instagram.com/lassediercks', label: 'Instagram' },
@@ -101,90 +125,152 @@ import Metainfo from './metainfo.json';
     title: Metainfo.title
   }
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+  @Prop() private timeColor!: string;
+
+  mounted() {
+    const today = new Date();
+    const minutes = today.getHours() * 60 + today.getMinutes();
+    const hslAmount = (minutes / 1440) * 360;
+    this.timeColor = `hsl(${hslAmount}, 100%,97%)`;
+    console.log(
+      `When you loaded this page ${minutes} minutes have already passed today, you're getting a color with the hue value ${hslAmount}`
+    );
+  }
+}
 </script>
 
 <style lang="scss">
-$blue: #256cff;
-@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600&display=swap');
+@import './components/variables';
 
-@mixin smallscreen {
-  @media (max-width: 775px) {
-    @content;
-  }
-}
 html {
   font-size: 20px;
   @include smallscreen {
     font-size: 16px;
   }
   ::selection {
-    color: white;
-    background: $blue;
+    background: var(--time-color);
   }
   ::-moz-selection {
     /* Code for Firefox */
-    color: white;
-    background: $blue;
+    background: var(--time-color);
   }
+}
+body {
+  margin: 0;
+  padding: 0;
 }
 #app {
   font-family: 'Asap', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  max-width: 50em;
+  color: $onyx;
+  max-width: 120em;
   margin: 0 auto;
-  padding: 0 1em;
-  margin-top: 4em;
-  @include smallscreen {
-    margin-top: 2em;
-  }
 }
 header {
-  display: flex;
-  align-items: center;
+  min-height: 65vh;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
-  margin-bottom: 6em;
   @include smallscreen {
     align-items: flex-start;
     flex-direction: column;
   }
+  @include mediumscreen {
+    grid-template-columns: 1.5fr 1fr;
+  }
+  @include tablet {
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+  }
 }
-h1 {
-  margin: 0;
+.header-content {
+  text-align: right;
+  @include tablet {
+    display: flex;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 3em 1em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    grid-row: 2;
+  }
+  @include smallscreen {
+    width: 100%;
+  }
+}
+.header-link {
+  display: inline-block;
+  background: white;
+  border: 2px solid $onyx;
+  margin-top: 1em;
+  box-shadow: -0.5em 0.5em 0 0 var(--time-color);
+  transition: box-shadow 120ms ease-in-out;
+  &:hover {
+    box-shadow: 0 0 0 0.5em var(--time-color);
+  }
+  text-decoration: none;
+  padding: 0.6em 0.6em;
+  @include tablet {
+    box-shadow: 0.5em 0.5em 0 0 var(--time-color);
+  }
+}
+.description {
+  display: block;
+  font-weight: 500;
+  font-size: 1.625em;
 }
 .social {
   display: flex;
+  justify-content: center;
   flex-flow: row wrap;
-  margin: 0 -0.5em;
+  margin: 6em 0;
   a {
     display: inline-block;
     padding: 0.5em;
   }
 }
 h1 {
+  margin: 0;
+
   font-size: 4em;
 }
 h2 {
   font-size: 2.4rem;
 }
-.about-text {
+main {
+  margin: 0 auto;
+  max-width: 50em;
+  padding: 0 2em;
+}
+.about {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: auto auto;
+  @include smallscreen {
+    grid-template-columns: auto;
+  }
+}
+#about {
   margin-top: 0;
-  margin-bottom: 6em;
+}
+.about-text {
+  display: inline;
   font-size: 1.6rem;
   line-height: 1.5;
 }
 .profile-image {
+  width: 100%;
+  height: 100%;
   pointer-events: none;
-  width: 17em;
-  border-radius: 17em;
-  height: 17em;
   object-fit: cover;
-  margin-right: 2em;
-  @include smallscreen {
-    margin-bottom: 1em;
-  }
+  box-shadow: -1.5em 1.5em 0 0 var(--time-color);
 }
 a {
   color: inherit;
@@ -194,12 +280,18 @@ a {
     font-weight: bold;
   }
 }
-
+.cv-wrap {
+  padding-top: 8em;
+}
+#cv {
+  margin-bottom: 2em;
+}
 .entry {
   text-align: left;
 
   display: grid;
-  grid-gap: 1em;
+  grid-column-gap: 1em;
+  grid-row-gap: 0.5em;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 5em;
   @media (max-width: 775px) {
@@ -209,10 +301,9 @@ a {
 .time {
   grid-column: span 2;
   text-align: left;
-  font-size: 1.6em;
-
-  letter-spacing: -1px;
-  opacity: 0.4;
+  font-size: 1.4em;
+  font-weight: 600;
+  color: $grey;
   @include smallscreen {
     grid-column: 1;
   }
@@ -221,20 +312,47 @@ a {
 }
 .company-name {
   display: inline-block;
-  font-size: 3.2em;
+  font-size: 3em;
   line-height: 1;
   margin-top: 0em;
   margin-bottom: 0.2em;
   font-weight: bold;
+  span {
+    position: relative;
+    z-index: 5;
+  }
+  a {
+    position: relative;
+
+    &:hover:after {
+      bottom: 0;
+      height: 100%;
+      right: 0;
+    }
+    text-decoration: none;
+    &:after {
+      position: absolute;
+      content: ' ';
+      height: 0.3em;
+      width: 110%;
+      left: -5%;
+      bottom: 3%;
+      background: var(--time-color);
+      transition: bottom 170ms ease-in-out, top 170ms ease-in-out,
+        height 170ms ease-in-out;
+    }
+  }
 }
 .company-description {
-  color: #76828c;
+  color: $onyx;
   margin: 0;
   font-size: 1.2em;
   line-height: 1.4;
-  max-width: 40ex;
+  max-width: 35ex;
+  padding-left: 0.2ex;
 }
 .project {
+  margin-top: 1ex;
   margin-bottom: 2em;
   &:last-child {
     margin-bottom: 0;
@@ -256,16 +374,27 @@ a {
   grid-column: span 2;
   text-align: center;
   padding: 1em 0;
-  margin: 2em 0;
-  border-top: 3px solid whitesmoke;
-  border-bottom: 3px solid whitesmoke;
+  margin-bottom: 2em;
+  border-top: 0.12em solid var(--time-color);
+  border-bottom: 0.12em solid var(--time-color);
   @include smallscreen {
     grid-column: 1;
     font-size: 2em;
   }
 }
-
+.waters {
+  border-top: 1em solid var(--time-color);
+  h3 {
+    font-size: 3em;
+  }
+  p {
+    font-size: 1.8em;
+    line-height: 1.4;
+  }
+  margin-bottom: 6em;
+}
 footer {
+  text-align: center;
   border-top: 3px solid whitesmoke;
   padding: 2em 1em;
 }

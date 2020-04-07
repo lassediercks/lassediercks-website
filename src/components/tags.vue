@@ -13,7 +13,9 @@ export default class Tags extends Vue {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import './variables';
+
 .tags {
   font-size: 0.8rem;
   margin: 0 -0.2rem;
@@ -23,6 +25,6 @@ export default class Tags extends Vue {
 .tag {
   padding: 0.3rem 0.4rem;
   margin: 0.2rem;
-  background: whitesmoke;
+  background: rgba($grey, 0.2);
 }
 </style>
