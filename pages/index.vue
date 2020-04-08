@@ -149,7 +149,7 @@ export default {
         { property: 'og:site_name', content: Metainfo.title },
         { property: 'og:title', content: Metainfo.title },
         { property: 'og:url', content: Metainfo.url },
-        { property: 'og:image', content: `${Metainfo.url}/open-graph.png?5` },
+        { property: 'og:image', content: `${Metainfo.url}/open-graph.png` },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
 
