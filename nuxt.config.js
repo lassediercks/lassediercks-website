@@ -3,7 +3,6 @@ export default {
   /*
    ** Headers of the page
    */
-  buildDir: 'dist',
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -46,4 +45,4 @@ export default {
      */
     extend(config, ctx) {}
   }
-}
+};
