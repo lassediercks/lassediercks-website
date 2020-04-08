@@ -7,9 +7,9 @@
       <div class="header-content">
         <h1>{{ Metainfo.title }}</h1>
         <span class="description">Web & Complexity Generalist</span>
-        <a href="mailto:hello@lassediercks.de" class="header-link"
-          >Write an E-Mail</a
-        >
+        <a href="mailto:hello@lassediercks.de" class="header-link">
+          Write me an E-Mail
+        </a>
       </div>
       <div
         :style="{ backgroundImage: `url(${profileImage})` }"
@@ -38,9 +38,9 @@
         <div>
           <p class="about-text">
             I'm a 1989 born generalist that makes a living by being a freelance
-            UI-Engineer. While I do enjoy being a technical expert I'm trying to
-            shift my journey towards a more complexity informed way of working.
-            One outcome of this is
+            UI-Engineer. While I do enjoy being a technical expert I'm shifting
+            my journey towards a more complexity informed way of working. One
+            outcome of this is
             <a href="https://schubrake.de"> the company Schubrakede</a> I
             founded with my
             <a href="https://xiphe.net">beloved brother Hannes.</a> <br /><br />
@@ -91,8 +91,9 @@
       </div>
       <div class="waters">
         <p>
-          I can add value in: Strategy, Product Management, Product Discovery,
-          Crisis Management or Complexity based Customer Research
+          I can add value to: <br />
+          Strategy, Product Management, Product Discovery, Crisis Management or
+          Complexity based Customer Research
         </p>
         <br />
         <p>Do you want to have a chat?</p>
