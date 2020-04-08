@@ -113,15 +113,27 @@ import Metainfo from './metainfo.json';
     };
   },
   metaInfo: {
+    title: Metainfo.title,
     meta: [
+      { name: 'theme-color', content: '#2c3e50' },
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { property: 'og:site_name', content: Metainfo.title },
       { property: 'og:title', content: Metainfo.title },
+      { property: 'og:url', content: Metainfo.url },
+      { property: 'og:image', content: `${Metainfo.url}/open-graph.png` },
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '630' },
+
       { name: 'description', content: Metainfo.description },
-      { property: 'og:description', content: Metainfo.description }
-    ],
-    title: Metainfo.title
+      { property: 'og:description', content: Metainfo.description },
+      { property: 'twitter:description', content: Metainfo.description },
+      { property: 'twitter:site', content: '@lassediercks' },
+      { property: 'twitter:creator', content: '@lassediercks' },
+      { property: 'twitter:image', content: `${Metainfo.url}/twitter.png` },
+      { property: 'twitter:image:width', content: '750' },
+      { property: 'twitter:image:height', content: '560' }
+    ]
   }
 })
 export default class App extends Vue {
@@ -209,6 +221,10 @@ header {
   &:hover {
     box-shadow: 0 0 0 0.5em var(--time-color);
   }
+  &:focus {
+    background: $onyx;
+    color: white;
+  }
   text-decoration: none;
   padding: 0.6em 0.6em;
   @include tablet {
@@ -270,7 +286,7 @@ a {
   color: inherit;
   &:focus {
     outline: none;
-    color: $blue;
+    background: var(--time-color);
     font-weight: bold;
   }
 }
@@ -317,7 +333,10 @@ a {
   }
   a {
     position: relative;
-
+    &:focus {
+      text-decoration: none;
+    }
+    &:focus:after,
     &:hover:after {
       bottom: 0;
       height: 100%;
