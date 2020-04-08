@@ -108,11 +108,11 @@
 </template>
 
 <script>
-import Tags from '~/components/tags.vue'
-import profileImage from '~/assets/lasse.jpg'
-import Cv from '~/cv.json'
-import Metainfo from '~/metainfo.json'
-import compass from '~/components/compass'
+import Tags from '~/components/tags.vue';
+import profileImage from '~/assets/lasse.png';
+import Cv from '~/cv.json';
+import Metainfo from '~/metainfo.json';
+import compass from '~/components/compass';
 
 export default {
   components: { Tags, compass },
@@ -130,7 +130,7 @@ export default {
         { href: 'https://medium.com/@lassediercks', label: 'Medium' },
         { href: 'https://open.spotify.com/user/lassediercks', label: 'Spotify' }
       ]
-    }
+    };
   },
   head() {
     return {
@@ -162,18 +162,18 @@ export default {
         { property: 'twitter:image:width', content: '750' },
         { property: 'twitter:image:height', content: '560' }
       ]
-    }
+    };
   },
 
   computed: {
     timeColor() {
-      const today = new Date()
-      const minutes = today.getHours() * 60 + today.getMinutes()
-      this.hueAmount = (minutes / 1440) * 360
-      return `hsl(${this.hueAmount}, 100%,96%)`
+      const today = new Date();
+      const minutes = today.getHours() * 60 + today.getMinutes();
+      this.hueAmount = (minutes / 1440) * 360;
+      return `hsl(${this.hueAmount}, 100%,96%)`;
     }
   }
-}
+};
 </script>
 
 <style lang="scss">
