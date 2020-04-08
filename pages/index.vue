@@ -149,7 +149,7 @@ export default {
         { property: 'og:site_name', content: Metainfo.title },
         { property: 'og:title', content: Metainfo.title },
         { property: 'og:url', content: Metainfo.url },
-        { property: 'og:image', content: `${Metainfo.url}/open-graph.png` },
+        { property: 'og:image', content: `${Metainfo.url}/open-graph.png?5` },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
 
@@ -160,6 +160,7 @@ export default {
         { property: 'twitter:creator', content: '@lassediercks' },
         { property: 'twitter:image', content: `${Metainfo.url}/twitter.png` },
         { property: 'twitter:image:width', content: '750' },
+        { name: 'twitter:card', content: 'photo' },
         { property: 'twitter:image:height', content: '560' }
       ]
     };
