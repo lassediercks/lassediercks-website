@@ -187,11 +187,11 @@ html {
     font-size: 16px;
   }
   ::selection {
-    background: var(--time-color);
+    background: hsl(calc(var(--hue-amount) - 180), 90%, 94%);
   }
   ::-moz-selection {
     /* Code for Firefox */
-    background: var(--time-color);
+    background: hsl(calc(var(--hue-amount) - 180), 90%, 94%);
   }
 }
 body {
@@ -262,7 +262,7 @@ header {
   box-shadow: -0.5em 0.5em 0 0 var(--time-color);
   transition: box-shadow 120ms ease-in-out;
   &:hover {
-    box-shadow: 0 0 0 0.5em var(--time-color);
+    box-shadow: 0 0 0 0.5em hsl(calc(var(--hue-amount) - 180), 90%, 94%);
   }
   &:focus {
     background: $onyx;
@@ -333,7 +333,7 @@ a {
   color: inherit;
   &:focus {
     outline: none;
-    background: var(--time-color);
+    background: hsl(calc(var(--hue-amount) - 180), 90%, 94%);
     font-weight: bold;
   }
 }
@@ -388,6 +388,7 @@ a {
       bottom: 0;
       height: 100%;
       right: 0;
+      background: hsl(calc(var(--hue-amount) - 180), 90%, 94%);
     }
     text-decoration: none;
     &:after {
@@ -399,7 +400,7 @@ a {
       bottom: 3%;
       background: var(--time-color);
       transition: bottom 170ms ease-in-out, top 170ms ease-in-out,
-        height 170ms ease-in-out;
+        height 170ms ease-in-out, background-color 170ms ease-in-out;
     }
   }
 }
@@ -435,8 +436,8 @@ a {
   text-align: center;
   padding: 1em 0;
   margin-bottom: 2em;
-  border-top: 0.12em solid var(--time-color);
-  border-bottom: 0.12em solid var(--time-color);
+  border-top: 0.12em solid hsl(calc(var(--hue-amount) - 270), 90%, 94%);
+  border-bottom: 0.12em solid hsl(calc(var(--hue-amount) - 270), 90%, 94%);
   @include smallscreen {
     grid-column: 1;
     font-size: 2em;
