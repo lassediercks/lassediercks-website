@@ -23,44 +23,6 @@
         ]
       },
       {
-        "company": "Fielmann",
-        "companyDescription": "is a german eyewear company. They are the biggest in Europe and the market leader in Germany.",
-        "website": "https://fielmann.de",
-        "when": "08/2019 - 03/2020",
-        "projects": [
-          {
-            "title": "Bridging the Gap between Design and Development",
-            "description": "Fielmann already had a design system that was entirely focused on designers. I helped them to make the design system consumable for developers. This mainly included implementing the existing design patterns into code and distributing them in a different granularity. I was the Design Systems Team Lead.",
-            "tags": [
-              "ReactJS",
-              "Styleguidist",
-              "NodeJS",
-              "CircleCI",
-              "SCSS",
-              "Component Library",
-              "Semantic Versioning",
-              "NPM",
-              "Design System"
-            ]
-          },
-          {
-            "title": "Prototyping a Real time experience",
-            "description": "As the only technical person in a design team I set up prototypes with novel technologies to resolve risks at an early stage and help to communicate with something tangible.",
-            "tags": [
-              "VueJS",
-              "ReactJS",
-              "Firebase",
-              "Netlify",
-              "Styled Components",
-              "PWA",
-              "GraphQL",
-              "Rapid Prototyping",
-              "OOUX"
-            ]
-          }
-        ]
-      },
-      {
         "company": "Brandeins",
         "companyDescription": "is an independent business magazine with a monthly print issue.",
         "website": "https://brandeins.de",
