@@ -6,7 +6,6 @@
     <header>
       <div class="header-content">
         <h1>{{ Metainfo.title }}</h1>
-        <span class="description">Web & Complexity Generalist</span>
         <a href="mailto:hello@lassediercks.de" class="header-link">
           Write me an E-Mail
         </a>
