@@ -23,9 +23,9 @@
         <compass class="compass"></compass>
         <h3>New waters ahead!</h3>
         <p>
-          I'm currently looking for a new adventure. If you think I could be a
-          valuable addition to your company or you want to aquire some of my
-          skills as a freelancer, let me know.
+          I'm currently open for new projects starting in august. If you're a
+          company and think I could be a decent addition to your team, let's
+          have a chat about that!
         </p>
       </div>
       <div class="social">
