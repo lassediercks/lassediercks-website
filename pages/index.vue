@@ -124,10 +124,13 @@ export default {
       hueAmount: 0,
       socialLinks: [
         { href: 'https://twitter.com/lassediercks', label: 'Twitter' },
+        {
+          href: 'https://www.youtube.com/channel/UCkdDfXiHbZnoqFjN9eLXDvA',
+          label: 'Youtube'
+        },
         { href: 'https://instagram.com/lassediercks', label: 'Instagram' },
         { href: 'http://github.com/lassediercks', label: 'Github' },
         { href: 'http://codepen.io/lassediercks', label: 'Codepen' },
-        { href: 'https://medium.com/@lassediercks', label: 'Medium' },
         { href: 'https://open.spotify.com/user/lassediercks', label: 'Spotify' }
       ]
     };
