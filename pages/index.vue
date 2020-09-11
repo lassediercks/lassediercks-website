@@ -22,7 +22,7 @@
         <compass class="compass"></compass>
         <h3>New waters ahead!</h3>
         <p>
-          I'm currently open for new projects starting in august. If you're a
+          I'm currently open for new projects starting in 2021. If you're a
           company and think I could be a decent addition to your team, let's
           have a chat about that!
         </p>
