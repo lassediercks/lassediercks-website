@@ -18,7 +18,7 @@
     </header>
 
     <main>
-      <div class="waters">
+      <!-- <div class="waters">
         <compass class="compass"></compass>
         <h3>New waters ahead!</h3>
         <p>
@@ -26,7 +26,7 @@
           company and think I could be a decent addition to your team, let's
           have a chat about that!
         </p>
-      </div>
+      </div> -->
       <div class="social">
         <a v-for="link in socialLinks" :href="link.href" :key="link.label">{{
           link.label
@@ -36,13 +36,8 @@
         <h2 id="about">About</h2>
         <div>
           <p class="about-text">
-            I'm a 1989 born generalist that makes a living by being a freelance
-            UI-Engineer. While I do enjoy being a technical expert I'm shifting
-            my journey towards a more complexity informed way of working. One
-            outcome of this is
-            <a href="https://schubrake.de"> the company Schubrakede</a> I
-            founded with my
-            <a href="https://xiphe.net">beloved brother Hannes.</a> <br /><br />
+            1989 born into of a creative family. I got comfortable in web
+            developement and turned that into being a freelance UI-Engineer.
             When not working or learning I'm most likely building Duplo Towers
             with my son and wife, playing the guitar or
             <a href="https://photography.lassediercks.de">
@@ -102,7 +97,7 @@
       </div>
     </main>
     <footer>
-      2020 Lasse Diercks - moin@lassediercks.de
+      Lasse Diercks - moin@lassediercks.de
     </footer>
   </div>
 </template>
