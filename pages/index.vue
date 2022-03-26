@@ -27,11 +27,7 @@
           have a chat about that!
         </p>
       </div> -->
-      <div class="social">
-        <a v-for="link in socialLinks" :href="link.href" :key="link.label">{{
-          link.label
-        }}</a>
-      </div>
+
       <div class="about">
         <h2 id="about">About</h2>
         <div>
