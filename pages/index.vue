@@ -32,10 +32,10 @@
         <h2 id="about">About</h2>
         <div>
           <p class="about-text">
-            1989 born into of a creative family. I got comfortable in web
-            developement and turned that into being a freelance UI-Engineer.
-            When not working or learning I'm most likely building Duplo Towers
-            with my son and wife, playing the guitar or
+            1989 born into a creative family. I got comfortable in web
+            development and turned that into being a freelance UI-Engineer. When
+            not working or learning I'm most likely building Duplo Towers with
+            my son and wife, playing the guitar or
             <a href="https://photography.lassediercks.de">
               doing photography.
             </a>
