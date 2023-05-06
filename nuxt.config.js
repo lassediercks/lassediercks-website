@@ -1,4 +1,6 @@
-export default {
+import { defineNuxtConfig } from 'nuxt/config';
+
+export default defineNuxtConfig({
   mode: 'universal',
   /*
    ** Headers of the page
@@ -43,6 +45,5 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
   }
-};
+});

@@ -5,13 +5,13 @@
   "author": "Lasse Diercks",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "start": "nuxi start",
+    "generate": "nuxi generate"
   },
   "dependencies": {
-    "nuxt": "^2.0.0",
+    "nuxt": "^3.0.0",
     "sass": "^1.49.9",
     "sass-loader": "^8.0.2"
   },

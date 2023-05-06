@@ -107,24 +107,8 @@ import compass from '~/components/compass';
 
 export default {
   components: { Tags, compass },
-  data() {
-    return {
-      Cv,
-      profileImage,
-      Metainfo,
-      hueAmount: 0,
-      socialLinks: [
-        { href: 'https://twitter.com/lassediercks', label: 'Twitter' },
-
-        { href: 'https://instagram.com/lassediercks', label: 'Instagram' },
-        { href: 'http://github.com/lassediercks', label: 'Github' },
-        { href: 'http://codepen.io/lassediercks', label: 'Codepen' },
-        { href: 'https://open.spotify.com/user/lassediercks', label: 'Spotify' }
-      ]
-    };
-  },
-  head() {
-    return {
+  setup() {
+    useHead({
       title: Metainfo.title,
       link: [
         {
@@ -153,6 +137,21 @@ export default {
         { property: 'twitter:image:width', content: '750' },
         { name: 'twitter:card', content: 'photo' },
         { property: 'twitter:image:height', content: '560' }
+      ]
+    });
+  },
+  data() {
+    return {
+      Cv,
+      profileImage,
+      Metainfo,
+      hueAmount: 0,
+      socialLinks: [
+        { href: 'https://twitter.com/lassediercks', label: 'Twitter' },
+        { href: 'https://instagram.com/lassediercks', label: 'Instagram' },
+        { href: 'http://github.com/lassediercks', label: 'Github' },
+        { href: 'http://codepen.io/lassediercks', label: 'Codepen' },
+        { href: 'https://open.spotify.com/user/lassediercks', label: 'Spotify' }
       ]
     };
   },
