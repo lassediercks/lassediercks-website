@@ -37,7 +37,8 @@ export default defineNuxtConfig({
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: ['@nuxt/image'],
+
   /*
    ** Build configuration
    */
