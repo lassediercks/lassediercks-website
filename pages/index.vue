@@ -4,44 +4,27 @@
     :style="`--time-color: ${timeColor}; --hue-amount: ${hueAmount}`"
   >
     <header>
-      <div class="header-content">
-        <h1>{{ Metainfo.title }}</h1>
-        <a href="mailto:hello@lassediercks.de" class="header-link">
-          Write me an E-Mail
-        </a>
+      <div class="profile-image-wrap">
+        <div class="profile-image-shadow" />
+        <nuxt-img src="/lasse.png" class="profile-image" />
       </div>
-      <div
-        :style="{ backgroundImage: `url(${profileImage})` }"
-        class="profile-image"
-        alt=""
-      />
+
+      <h1>{{ Metainfo.title }}</h1>
+      <p>{{ Metainfo.role }}</p>
+      <a href="mailto:hello@lassediercks.de" class="header-link">
+        Write me an E-Mail
+      </a>
     </header>
 
     <main>
-      <!-- <div class="waters">
+      <div class="waters">
         <compass class="compass"></compass>
         <h3>New waters ahead!</h3>
         <p>
-          I'm currently open for new projects starting in 2021. If you're a
-          company and think I could be a decent addition to your team, let's
-          have a chat about that!
+          I'm currently assesing projects for 2024.
         </p>
-      </div> -->
-
-      <div class="about">
-        <h2 id="about">About</h2>
-        <div>
-          <p class="about-text">
-            1989 born into a creative family. I got comfortable in web
-            development and turned that into being a freelance UI-Engineer. When
-            not working or learning I'm most likely building Duplo Towers with
-            my son and wife, playing the guitar or
-            <a href="https://photography.lassediercks.de">
-              doing photography.
-            </a>
-          </p>
-        </div>
       </div>
+
       <div class="cv-wrap">
         <h2 id="cv">Experience</h2>
         <div v-for="entry in Cv" :key="entry.when" class="entry">
@@ -91,6 +74,16 @@
           Write me an E-Mail
         </a>
       </div>
+      <div class="about">
+        <h2 id="about">About</h2>
+        <div>
+          <p class="about-text">
+            1989 born into a creative family. I got comfortable in web
+            development and turned that into being a freelance
+            {{ Metainfo.role }}.
+          </p>
+        </div>
+      </div>
     </main>
     <footer>
       Lasse Diercks - moin@lassediercks.de
@@ -100,7 +93,6 @@
 
 <script>
 import Tags from '~/components/tags.vue';
-import profileImage from '~/assets/lasse.png';
 import Cv from '~/cv.json';
 import Metainfo from '~/metainfo.json';
 import compass from '~/components/compass';
@@ -143,7 +135,6 @@ export default {
   data() {
     return {
       Cv,
-      profileImage,
       Metainfo,
       hueAmount: 0,
       socialLinks: [
@@ -158,9 +149,10 @@ export default {
 
   computed: {
     timeColor() {
+      const manualShift = 25;
       const today = new Date();
       const minutes = today.getHours() * 60 + today.getMinutes();
-      this.hueAmount = (minutes / 1440) * 360;
+      this.hueAmount = (minutes / 1440) * 360 + manualShift;
       return `hsl(${this.hueAmount}, 100%,96%)`;
     }
   }
@@ -176,73 +168,53 @@ html {
     font-size: 16px;
   }
   ::selection {
-    background: hsl(calc(var(--hue-amount) - 180), 90%, 94%);
+    background: hsl(calc(var(--hue-amount) - 45), 90%, 94%);
   }
   ::-moz-selection {
     /* Code for Firefox */
-    background: hsl(calc(var(--hue-amount) - 180), 90%, 94%);
+    background: hsl(calc(var(--hue-amount) - 45), 90%, 94%);
   }
 }
 body {
   margin: 0;
   padding: 0;
 }
+
 #app {
   font-family: 'Asap', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $onyx;
-  max-width: 120em;
+
   margin: 0 auto;
-}
-header {
-  height: 65vh;
   display: grid;
-  place-items: center;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  margin-bottom: 6em;
+  align-items: start;
+  max-width: 2100px;
+  grid-template-columns: 0.6fr 1fr;
+  grid-template-areas: 'header main .' 'footer footer footer';
   @include smallscreen {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  @include mediumscreen {
-    grid-template-columns: 1.5fr 1fr;
-  }
-  @include tablet {
-    min-height: 80vh;
-    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
+    grid-template-areas: 'header' 'main' 'footer';
   }
 }
-.profile-image {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center center;
-  pointer-events: none;
-  object-fit: cover;
-  box-shadow: -1.5em 1.5em 0 0 var(--time-color);
-  @include tablet {
-  }
-}
-.header-content {
-  text-align: right;
-  @include tablet {
-    display: flex;
-    text-align: left;
-    box-sizing: border-box;
-    padding: 3em 2em;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    order: 2;
-  }
+
+header {
   @include smallscreen {
-    width: 100%;
+    margin-top: 3em;
+    position: initial;
+  }
+  position: sticky;
+  top: 0;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 2em;
+  grid-area: header;
+  p {
+    margin: 0;
   }
 }
+
 .header-link {
   display: inline-block;
   background: white;
@@ -250,8 +222,9 @@ header {
   margin-top: 1em;
   box-shadow: -0.5em 0.5em 0 0 var(--time-color);
   transition: box-shadow 120ms ease-in-out;
+  white-space: nowrap;
   &:hover {
-    box-shadow: 0 0 0 0.5em hsl(calc(var(--hue-amount) - 180), 90%, 94%);
+    box-shadow: 0 0 0 0.5em hsl(calc(var(--hue-amount) - 45), 90%, 94%);
   }
   &:focus {
     background: $onyx;
@@ -263,6 +236,31 @@ header {
     box-shadow: 0.5em 0.5em 0 0 var(--time-color);
   }
 }
+
+.profile-image-wrap {
+  width: 8em;
+  height: 7em;
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.profile-image,
+.profile-image-shadow {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  display: block;
+
+  object-fit: cover;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.profile-image-shadow {
+  background: var(--time-color);
+  transform: scale(1.1);
+}
+
 .description {
   display: block;
   font-weight: 500;
@@ -290,13 +288,18 @@ header {
 h1 {
   margin: 0;
 
-  font-size: 4em;
+  font-size: 3em;
 }
 h2 {
   font-size: 2.4rem;
 }
 main {
-  margin: 0 auto;
+  @include smallscreen {
+    margin-top: 3em;
+  }
+  grid-area: main;
+
+  margin: 10em auto 0 auto;
   max-width: 50em;
   padding: 0 2em;
 }
@@ -307,6 +310,7 @@ main {
   @include smallscreen {
     grid-template-columns: auto;
   }
+  margin-bottom: 4em;
 }
 #about {
   margin-top: 0;
@@ -327,10 +331,8 @@ a {
   }
 }
 .cv-wrap {
-  padding-top: 8em;
 }
 #cv {
-  margin-bottom: 2em;
 }
 .entry {
   text-align: left;
@@ -340,7 +342,7 @@ a {
   grid-row-gap: 0.5em;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 5em;
-  @media (max-width: 775px) {
+  @include mediumscreen {
     grid-template-columns: 1fr;
   }
 }
@@ -350,12 +352,11 @@ a {
   font-size: 1.4em;
   font-weight: 600;
   color: $grey;
-  @include smallscreen {
+  @include mediumscreen {
     grid-column: 1;
   }
 }
-.company-details {
-}
+
 .company-name {
   display: inline-block;
   font-size: 3em;
@@ -377,7 +378,7 @@ a {
       bottom: 0;
       height: 100%;
       right: 0;
-      background: hsl(calc(var(--hue-amount) - 180), 90%, 94%);
+      background: hsl(calc(var(--hue-amount) - 45), 90%, 94%);
     }
     text-decoration: none;
     &:after {
@@ -419,15 +420,14 @@ a {
   line-height: 1.4;
 }
 .became-freelancer {
-  text-transform: uppercase;
-  font-size: 4em;
+  font-size: 2em;
   grid-column: span 2;
   text-align: center;
   padding: 1em 0;
   margin-bottom: 2em;
-  border-top: 0.12em solid hsl(calc(var(--hue-amount) - 270), 90%, 94%);
-  border-bottom: 0.12em solid hsl(calc(var(--hue-amount) - 270), 90%, 94%);
-  @include smallscreen {
+  border-top: 0.12em solid hsla(calc(var(--hue-amount) - 90), 90%, 70%, 0.3);
+  border-bottom: 0.12em solid hsla(calc(var(--hue-amount) - 90), 90%, 70%, 0.3);
+  @include mediumscreen {
     grid-column: 1;
     font-size: 2em;
   }
@@ -436,10 +436,9 @@ a {
   position: relative;
 
   padding: 3em 0;
-
   h3 {
     margin-top: 0;
-    margin-bottom: 0.4em;
+    margin-bottom: 0;
     font-size: 3em;
   }
   p {
@@ -447,12 +446,13 @@ a {
     line-height: 1.4;
     margin: 0;
   }
-  margin-bottom: 0em;
+  margin-bottom: 2em;
 }
 .compass {
   position: absolute;
-  color: hsl(calc(var(--hue-amount) + 90), 90%, 94%);
+  color: hsla(calc(var(--hue-amount) + 240), 90%, 70%, 0.5);
 
+  transform: rotate(20deg);
   width: auto;
   left: -7em;
   top: -7em;
@@ -460,6 +460,7 @@ a {
   z-index: -1;
 }
 footer {
+  grid-area: footer;
   text-align: center;
   border-top: 3px solid whitesmoke;
   padding: 2em 1em;
