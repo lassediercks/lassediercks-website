@@ -21,7 +21,7 @@
         <compass class="compass"></compass>
         <h3>New waters ahead!</h3>
         <p>
-          I'm currently assesing projects for 2024.
+          I'm currently exploring opportunities for 2024.
         </p>
       </div>
 
