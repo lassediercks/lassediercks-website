@@ -164,6 +164,7 @@ export default {
 
 html {
   font-size: 20px;
+
   @include smallscreen {
     font-size: 16px;
   }
@@ -188,7 +189,7 @@ body {
 
   margin: 0 auto;
   display: grid;
-  align-items: start;
+  align-items: flex-start;
   max-width: 2100px;
   grid-template-columns: 0.6fr 1fr;
   grid-template-areas: 'header main .' 'footer footer footer';
@@ -207,7 +208,7 @@ header {
   top: 0;
   display: inline-flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   padding: 2em;
   grid-area: header;
   p {
@@ -257,7 +258,7 @@ header {
 }
 
 .profile-image-shadow {
-  background: var(--time-color);
+  background: hsla(calc(var(--hue-amount)), 90%, 75%, 1);
   transform: scale(1.1);
 }
 
@@ -450,7 +451,7 @@ a {
 }
 .compass {
   position: absolute;
-  color: hsla(calc(var(--hue-amount) + 240), 90%, 70%, 0.5);
+  color: hsla(calc(var(--hue-amount) + 240), 90%, 60%, 0.5);
 
   transform: rotate(20deg);
   width: auto;
