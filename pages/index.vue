@@ -17,13 +17,13 @@
     </header>
 
     <main>
-      <div class="waters">
+      <!-- <div class="waters">
         <compass class="compass"></compass>
         <h3>New waters ahead!</h3>
         <p>
           I'm currently exploring opportunities for 2024.
         </p>
-      </div>
+      </div> -->
 
       <div class="cv-wrap">
         <h2 id="cv">Experience</h2>
