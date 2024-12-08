@@ -160,7 +160,7 @@
     "projects": [
       {
         "title": "Scaffolding a project",
-        "description": "I helped the agency cellular (before it became FFW) to implement an inhouse crafted redesign for the IFB. My job was to setup the initial skeleton of the website as well as integrating the most used UI components for later reuse by other developers.",
+        "description": "I helped the agency cellular (before it became Jakala) to implement an inhouse crafted redesign for the IFB. My job was to setup the initial skeleton of the website as well as integrating the most used UI components for later reuse by other developers.",
         "tags": ["ReactJS", "Typescript", "GraphQL"]
       }
     ]
@@ -173,7 +173,7 @@
     "projects": [
       {
         "title": "Using web technologies on a TV",
-        "description": "A1 ships television boxes to their customer. My job was to implement a redesigned UI created by the agency cellular (before it became FFW) to run on their domestically distributed boxes.",
+        "description": "A1 ships television boxes to their customer. My job was to implement a redesigned UI created by the agency cellular (before it became Jakala) to run on their domestically distributed boxes.",
         "tags": ["SVN", "HTML", "CSS", "JS", "Perl"]
       }
     ]
@@ -186,7 +186,7 @@
     "projects": [
       {
         "title": "Scaffold a new UI for retail",
-        "description": "I helped the agency cellular (before it became FFW) to implement an in house crafted redesign for Budnikowsky. My job was to create the initial website skeleton and UI components that could display a wide range of products.",
+        "description": "I helped the agency cellular (before it became Jakala) to implement an in house crafted redesign for Budnikowsky. My job was to create the initial website skeleton and UI components that could display a wide range of products.",
         "tags": ["ReactJS", "Responsive", "Styleguide"]
       }
     ]
