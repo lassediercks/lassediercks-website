@@ -1,5 +1,17 @@
 [
   {
+    "company": "CAS",
+    "companyDescription": "are rubber injection molding machines experts",
+    "when": "2024",
+    "projects": [
+      {
+        "title": "A Prototype with modern technologies",
+        "description": "I collaborated with CAS to establish a robust technical foundation for a frontend system. The project involved addressing highly specific requirements tailored to a unique use case, necessitating bespoke solutions.",
+        "tags": ["SvelteKit", "i18n", "Websockets", "Docker", "Cloudflare"]
+      }
+    ]
+  },
+  {
     "company": "CandleScience",
     "companyDescription": "is a wax and candle supply online shop based in North Carolina, USA.",
     "website": "https://www.candlescience.com/",
@@ -8,7 +20,7 @@
       {
         "title": "A DiY Product Configurator",
         "link": "https://www.candlescience.com/candle-batch-calculator/",
-        "description": "Candle making involves combining various supplies in the right way. First, we needed to establish a foundation to input rich product data into the backend. Once that was in place, we were able to build a product configurator that calculates the correct wax amount and wick size based on the selected container, desired batch size, and fragrance strength.",
+        "description": "Candle making requires blending various supplies correctly. Initially, we developed a system for inputting comprehensive product data into the backend. With this foundation established, we created a product configurator that accurately calculates the appropriate wax quantity and wick size based on the chosen container, batch size, and fragrance intensity.",
         "tags": ["VueJS", "Solidus", "Aglolia"]
       },
       {
