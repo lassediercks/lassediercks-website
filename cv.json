@@ -153,6 +153,19 @@
     ]
   },
   {
+    "company": "Superluminar",
+    "companyDescription": "Top notch cloud computing consultancy",
+    "website": "https://superluminar.io/",
+    "when": "01/2019",
+    "projects": [
+      {
+        "title": "Website Redesign",
+        "description": "I was responsible for implementing a redesign of the Superluminar website, based on designs provided by an external studio. It was particularly rewarding to collaborate with Superluminar, as its founders were once my colleagues at Jimdo.",
+        "tags": ["Hugo", "HTML", "CSS", "Animation"]
+      }
+    ]
+  },
+  {
     "company": "IFBHH",
     "companyDescription": "is the state development bank for Hamburg, Germany.",
     "website": "https://ifbhh.de",
