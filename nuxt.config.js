@@ -1,10 +1,14 @@
 import { defineNuxtConfig } from 'nuxt/config';
 
 export default defineNuxtConfig({
-  mode: 'universal',
   /*
    ** Headers of the page
    */
+
+  devServer: {
+    port: 5000
+  },
+
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -18,22 +22,27 @@ export default defineNuxtConfig({
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
+
   /*
    ** Customize the progress-bar color
    */
   loading: { color: '#fff' },
+
   /*
    ** Global CSS
    */
   css: [],
+
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [{ src: '~/plugins/vercel.ts', mode: 'client' }],
+
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [],
+
   /*
    ** Nuxt.js modules
    */
@@ -42,9 +51,6 @@ export default defineNuxtConfig({
   /*
    ** Build configuration
    */
-  build: {
-    /*
-     ** You can extend webpack config here
-     */
-  }
+
+  compatibilityDate: '2024-12-08'
 });

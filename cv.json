@@ -6,6 +6,23 @@
     "when": "02/2020 - ongoing",
     "projects": [
       {
+        "title": "A DiY Product Configurator",
+        "link": "https://www.candlescience.com/candle-batch-calculator/",
+        "description": "Candle making involves combining various supplies in the right way. First, we needed to establish a foundation to input rich product data into the backend. Once that was in place, we were able to build a product configurator that calculates the correct wax amount and wick size based on the selected container, desired batch size, and fragrance strength.",
+        "tags": ["VueJS", "Solidus", "Aglolia"]
+      },
+      {
+        "title": "A Product that can have Products",
+        "link": "https://www.candlescience.com/kits/signature-reed-diffuser-kit/",
+        "description": "The UI was the easy part, the technical implementation of a product that can have products was the real challenge. I helped CandleScience to implement a new product type that can have multiple products as its components. I could leverage a custom NuxtJS endpoint to cache the initial Fragrance List which is fetched by Algolia. ",
+        "tags": ["NuxtJS", "Cloudflare Worker", "Aglolia"]
+      },
+      {
+        "title": "Typescript & JsonAPI",
+        "description": "The initial redesign of candlescience.com has been a result focused effort. To achieve good maintainability and ease the use of the already established JsonAPI I introduced Typescript to the crucial parts of the website.",
+        "tags": ["NuxtJS", "Typescript", "JsonAPI"]
+      },
+      {
         "title": "Always change a running System. Nuxt2 to Nuxt3",
         "description": "As Vue2 approached its end of support on 12/23, we were compelled to upgrade to Nuxt3. Although we refactored parts of the codebase to improve it and eliminate a significant amount of technical debt, this was still the largest project I've worked on, with the primary objective of ensuring that there were no discernible changes for the end customer",
         "tags": ["VueJS", "NuxtJS", "Vite", "Vitest", "Composables"]

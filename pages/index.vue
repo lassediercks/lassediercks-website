@@ -1,8 +1,5 @@
 <template>
-  <div
-    id="app"
-    :style="`--time-color: ${timeColor}; --hue-amount: ${hueAmount}`"
-  >
+  <div id="app">
     <header>
       <div class="profile-image-wrap">
         <div class="profile-image-shadow" />
@@ -334,7 +331,10 @@ a {
 .cv-wrap {
 }
 #cv {
+  margin-top: 32px;
+  margin-bottom: 1em;
 }
+
 .entry {
   text-align: left;
 
