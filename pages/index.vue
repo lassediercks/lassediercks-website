@@ -3,7 +3,7 @@
     <header>
       <div class="profile-image-wrap">
         <div class="profile-image-shadow" />
-        <nuxt-img src="/lasse.png" class="profile-image" />
+        <nuxt-img src="/lasse_small.jpg" class="profile-image" />
       </div>
 
       <h1>{{ Metainfo.title }}</h1>
