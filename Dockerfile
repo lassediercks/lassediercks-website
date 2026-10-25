@@ -8,10 +8,12 @@
 # ── build: static generate ───────────────────────────────────────
 FROM harbor.exaptation.company/dockerhub/library/node:22-bookworm-slim AS build
 WORKDIR /app
-ENV COREPACK_ENABLE_DOWNLOAD_PROMPT=0 NUXT_TELEMETRY_DISABLED=1
-# pnpm 9 matches lockfileVersion 9.0. Corepack fetches it via the build
-# proxy (http(s)_proxy are passed as build args in CI).
-RUN corepack enable && corepack prepare pnpm@9.15.9 --activate
+ENV NUXT_TELEMETRY_DISABLED=1
+# pnpm 9 matches lockfileVersion 9.0. Installed with npm, not corepack:
+# npm honours the http(s)_proxy build args CI passes for the runner's egress
+# proxy, corepack's fetch did not (CI run #1, "Error when performing the
+# request to https://registry.npmjs.org/pnpm/-/pnpm-9.15.9.tgz").
+RUN npm install -g pnpm@9.15.9
 COPY package.json pnpm-lock.yaml ./
 RUN pnpm install --frozen-lockfile
 COPY . .
