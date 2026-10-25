@@ -5,10 +5,8 @@
 # tag is what deploys — `latest` exists for humans and is excluded there.
 #
 # ── PREREQUISITES ─────────────────────────────────────────────────────────
-#  Secrets HARBOR_NAME + HARBOR_KEY: a Harbor robot account with push on the
-#  `exaptation` project. The exaptation ORG has them; a repo under the user
-#  `lassediercks` does not inherit org secrets, so either set them on this
-#  repo or move the repo into the org.
+#  Secrets HARBOR_NAME + HARBOR_KEY (Harbor robot with push on the
+#  `exaptation` project), inherited from the exaptation org.
 #
 # Raw docker CLI + classic builder, same shape as exaptation/website.
 # ⚠️ `run:` steps execute under sh (dash), NOT bash. POSIX only.
@@ -27,7 +25,7 @@ on:
 
 env:
   REGISTRY: harbor.exaptation.company
-  IMAGE: harbor.exaptation.company/exaptation/lassediercks-website
+  IMAGE: harbor.exaptation.company/exaptation/lassediercksweb
 
 jobs:
   docker:

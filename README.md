@@ -2,7 +2,7 @@
 
 Personal website of Lasse Alexandros Diercks. From 2026 on, I work professionally under [Exaptation.eu](https://exaptation.eu/lasse).
 
-**Repository:** primary is [code.exaptation.company/lassediercks/lassediercks-website](https://code.exaptation.company/lassediercks/lassediercks-website). GitHub is a deploy mirror.
+**Repository:** primary is [code.exaptation.company/exaptation/lassediercks-website](https://code.exaptation.company/exaptation/lassediercks-website). GitHub is a deploy mirror.
 
 ## Build Setup
 
@@ -26,4 +26,4 @@ $ docker build -t lassediercks-website .
 $ docker run --rm --read-only --tmpfs /tmp -p 8080:8080 lassediercks-website
 ```
 
-On Forgejo, `ci.yml` builds the image on every push, `release.yml` (releasejo) opens release PRs from conventional commits, and `docker.yml` pushes `harbor.exaptation.company/exaptation/lassediercks-website:<version>` on each release tag. The homelab cluster deploys that tag via Flux image automation.
+On Forgejo, `ci.yml` builds the image on every push, `release.yml` (releasejo) opens release PRs from conventional commits, and `docker.yml` pushes `harbor.exaptation.company/exaptation/lassediercksweb:<version>` on each release tag. The homelab cluster deploys that tag via Flux image automation.

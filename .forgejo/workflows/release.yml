@@ -5,10 +5,10 @@
 #
 # ── PREREQUISITES ─────────────────────────────────────────────────────────
 #  1. Secret RELEASE_TOKEN — Forgejo PAT with repository (contents + PR write),
-#     issue (read + write), write:release. Without issue scope the PR opens but
-#     tag-on-merge silently never fires (releasejo finds the merged release PR
-#     by its `autorelease: pending` label). The exaptation org has one; this
-#     user-owned repo does not inherit it.
+#     issue (read + write), write:release, inherited from the exaptation org.
+#     Without issue scope the PR opens but tag-on-merge silently never fires
+#     (releasejo finds the merged release PR by its `autorelease: pending`
+#     label).
 #  2. Boundary tag `1.0.0` (manifest version) — seeded on edbc7e7, the last
 #     commit Vercel deployed, so the first changelog starts after it.
 #
