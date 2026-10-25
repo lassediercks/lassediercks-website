@@ -1,0 +1,66 @@
+# release-please, Forgejo-native (releasejo, github.com/lassediercksAI/releasejo).
+# Opens a release PR from conventional commits; once merged, tags it (bare
+# semver, e.g. 1.1.0) and cuts the Forgejo Release. docker.yml builds on that
+# tag. Copied from exaptation/website release.yml.
+#
+# ── PREREQUISITES ─────────────────────────────────────────────────────────
+#  1. Secret RELEASE_TOKEN — Forgejo PAT with repository (contents + PR write),
+#     issue (read + write), write:release. Without issue scope the PR opens but
+#     tag-on-merge silently never fires (releasejo finds the merged release PR
+#     by its `autorelease: pending` label). The exaptation org has one; this
+#     user-owned repo does not inherit it.
+#  2. Boundary tag `1.0.0` (manifest version) — seeded on edbc7e7, the last
+#     commit Vercel deployed, so the first changelog starts after it.
+#
+# ⚠️ `run:` steps execute under sh (dash), NOT bash. POSIX only.
+
+name: release-please
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: releasejo-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  # In-cluster Forgejo — in the runner's NO_PROXY; public code.exaptation.company
+  # is NOT on the egress allowlist. releasejo appends /api/v1 itself.
+  FORGEJO_URL: http://forgejo.forgejo.svc.cluster.local:3000
+  RELEASEJO_VERSION: v0.0.13
+  # sha256 of releasejo-linux-amd64 @ v0.0.13. Bump both together.
+  RELEASEJO_SHA256: fb0ba5db1f99ac32d204fa45dcbd8d71e0bb0d0d7f3740e13afee79672e86d49
+
+jobs:
+  release:
+    runs-on: self-hosted
+    container:
+      image: harbor.exaptation.company/dockerhub/library/node:22-bookworm
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: fetch releasejo (checksum-verified)
+        run: |
+          set -eu
+          url="https://github.com/lassediercksAI/releasejo/releases/download/${RELEASEJO_VERSION}/releasejo-linux-amd64"
+          curl -fsSL "$url" -o /usr/local/bin/releasejo
+          echo "${RELEASEJO_SHA256}  /usr/local/bin/releasejo" | sha256sum -c -
+          chmod +x /usr/local/bin/releasejo
+          releasejo -version
+
+      - name: run releasejo
+        env:
+          RELEASE_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        run: |
+          set -eu
+          if [ -z "${RELEASE_TOKEN:-}" ]; then
+            echo "FAIL: RELEASE_TOKEN is unset. See the prerequisites at the top." >&2
+            exit 1
+          fi
+          releasejo \
+            -repo "${{ github.repository }}" \
+            -api-url "${FORGEJO_URL}" \
+            -target-branch main \
+            -token "${RELEASE_TOKEN}"

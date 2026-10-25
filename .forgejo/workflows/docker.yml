@@ -1,0 +1,90 @@
+# Build the site image and push it to Harbor.
+#
+# Triggered by the tag releasejo pushes; also dispatchable. Flux's ImagePolicy
+# (homelab apps/lassediercks-website) filters on bare semver, so the version
+# tag is what deploys — `latest` exists for humans and is excluded there.
+#
+# ── PREREQUISITES ─────────────────────────────────────────────────────────
+#  Secrets HARBOR_NAME + HARBOR_KEY: a Harbor robot account with push on the
+#  `exaptation` project. The exaptation ORG has them; a repo under the user
+#  `lassediercks` does not inherit org secrets, so either set them on this
+#  repo or move the repo into the org.
+#
+# Raw docker CLI + classic builder, same shape as exaptation/website.
+# ⚠️ `run:` steps execute under sh (dash), NOT bash. POSIX only.
+
+name: docker
+
+on:
+  push:
+    # include-v-in-tag: false -> tags are bare semver (1.1.0).
+    tags: ['[0-9]*']
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version tag to build, e.g. 1.1.0'
+        required: true
+
+env:
+  REGISTRY: harbor.exaptation.company
+  IMAGE: harbor.exaptation.company/exaptation/lassediercks-website
+
+jobs:
+  docker:
+    runs-on: self-hosted
+    container:
+      image: harbor.exaptation.company/dockerhub/library/node:22-bookworm
+    env:
+      DOCKER_BUILDKIT: '0'
+      DOCKER_HOST: tcp://172.17.0.1:2375
+      NO_PROXY: 'localhost,127.0.0.1,172.17.0.1,.svc.cluster.local,.svc,forgejo.forgejo.svc.cluster.local,harbor.exaptation.company'
+      no_proxy: 'localhost,127.0.0.1,172.17.0.1,.svc.cluster.local,.svc,forgejo.forgejo.svc.cluster.local,harbor.exaptation.company'
+      BUILD_PROXY_ARGS: >-
+        --build-arg http_proxy=http://egress-proxy.forgejo-runner.svc.cluster.local:3128
+        --build-arg https_proxy=http://egress-proxy.forgejo-runner.svc.cluster.local:3128
+        --build-arg HTTP_PROXY=http://egress-proxy.forgejo-runner.svc.cluster.local:3128
+        --build-arg HTTPS_PROXY=http://egress-proxy.forgejo-runner.svc.cluster.local:3128
+        --build-arg no_proxy=localhost,127.0.0.1,.svc.cluster.local,.svc,harbor.exaptation.company
+        --build-arg NO_PROXY=localhost,127.0.0.1,.svc.cluster.local,.svc,harbor.exaptation.company
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.version || github.ref }}
+
+      - name: install docker CLI
+        run: |
+          set -eu
+          apt-get update
+          apt-get install -y --no-install-recommends docker.io
+          docker --version
+
+      - name: log in to Harbor
+        env:
+          HARBOR_NAME: ${{ secrets.HARBOR_NAME }}
+          HARBOR_KEY: ${{ secrets.HARBOR_KEY }}
+        run: |
+          set -eu
+          if [ -z "${HARBOR_NAME:-}" ] || [ -z "${HARBOR_KEY:-}" ]; then
+            echo "FAIL: HARBOR_NAME/HARBOR_KEY unset. See the prerequisites at the top." >&2
+            exit 1
+          fi
+          echo "$HARBOR_KEY" | docker login "$REGISTRY" -u "$HARBOR_NAME" --password-stdin
+
+      - name: build
+        run: |
+          set -eu
+          version="${{ github.event.inputs.version || github.ref_name }}"
+          version=$(printf '%s' "$version" | sed 's|^v||')
+          docker build $BUILD_PROXY_ARGS \
+            -t "${IMAGE}:${version}" \
+            -t "${IMAGE}:latest" \
+            .
+          echo "$version" > /tmp/version
+
+      - name: push
+        run: |
+          set -eu
+          version=$(cat /tmp/version)
+          docker push "${IMAGE}:${version}"
+          docker push "${IMAGE}:latest"
+          echo "pushed ${IMAGE}:${version}"

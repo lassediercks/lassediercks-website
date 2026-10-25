@@ -1,0 +1,67 @@
+# CI — build the site image (no push) on every branch push and PR, so a broken
+# `nuxi generate` or Dockerfile shows up before a release tag does.
+#
+# Needs NO secrets: base images come from the Harbor Docker Hub proxy-cache,
+# which serves anonymous pulls. Shape copied from exaptation/website docker.yml
+# (dind via DOCKER_HOST, classic builder, proxy build args).
+#
+# ⚠️ `run:` steps execute under sh (dash), NOT bash. POSIX only.
+
+name: ci
+
+on:
+  push:
+    # Release PRs only touch CHANGELOG, the manifest and the version.
+    branches-ignore: ['releasejo--**']
+  pull_request:
+
+jobs:
+  build:
+    runs-on: self-hosted
+    if: ${{ !startsWith(github.head_ref, 'releasejo--') }}
+    container:
+      # node, not docker:cli — actions/checkout is a Node action.
+      image: harbor.exaptation.company/dockerhub/library/node:22-bookworm
+    env:
+      # Classic builder: BuildKit's COPY fails on the runner's Kata/virtiofs dind.
+      DOCKER_BUILDKIT: '0'
+      DOCKER_HOST: tcp://172.17.0.1:2375
+      # The docker CLI honours *_PROXY, so the dind address must be direct.
+      NO_PROXY: 'localhost,127.0.0.1,172.17.0.1,.svc.cluster.local,.svc,forgejo.forgejo.svc.cluster.local,harbor.exaptation.company'
+      no_proxy: 'localhost,127.0.0.1,172.17.0.1,.svc.cluster.local,.svc,forgejo.forgejo.svc.cluster.local,harbor.exaptation.company'
+      # RUN steps execute inside dind, which does not inherit the job's proxy
+      # env — corepack and pnpm need it passed explicitly.
+      BUILD_PROXY_ARGS: >-
+        --build-arg http_proxy=http://egress-proxy.forgejo-runner.svc.cluster.local:3128
+        --build-arg https_proxy=http://egress-proxy.forgejo-runner.svc.cluster.local:3128
+        --build-arg HTTP_PROXY=http://egress-proxy.forgejo-runner.svc.cluster.local:3128
+        --build-arg HTTPS_PROXY=http://egress-proxy.forgejo-runner.svc.cluster.local:3128
+        --build-arg no_proxy=localhost,127.0.0.1,.svc.cluster.local,.svc,harbor.exaptation.company
+        --build-arg NO_PROXY=localhost,127.0.0.1,.svc.cluster.local,.svc,harbor.exaptation.company
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: install docker CLI
+        run: |
+          set -eu
+          apt-get update
+          apt-get install -y --no-install-recommends docker.io
+          docker --version
+
+      - name: build
+        run: |
+          set -eu
+          docker build $BUILD_PROXY_ARGS -t "lassediercks-website:ci-${GITHUB_SHA}" .
+
+      - name: smoke test
+        run: |
+          set -eu
+          img="lassediercks-website:ci-${GITHUB_SHA}"
+          # Same constraints as the cluster: read-only root, /tmp writable only.
+          docker run --rm --read-only --tmpfs /tmp --cap-drop ALL "$img" nginx -t
+          docker run --rm --entrypoint sh "$img" -c \
+            'test -s /usr/share/nginx/html/index.html && grep -q "https://exaptation.eu/lasse" /usr/share/nginx/html/index.html'
+
+      - name: clean up
+        if: always()
+        run: docker rmi "lassediercks-website:ci-${GITHUB_SHA}" || true
