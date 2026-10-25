@@ -36,7 +36,7 @@ export default defineNuxtConfig({
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~/plugins/vercel.ts', mode: 'client' }],
+  plugins: [],
 
   /*
    ** Nuxt.js dev-modules

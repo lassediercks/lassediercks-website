@@ -11,7 +11,6 @@
     "generate": "nuxi generate"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.4.1",
     "nuxt": "^3.14.1592",
     "sass": "^1.82.0",
     "sass-loader": "^8.0.2"
